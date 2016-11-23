@@ -1,0 +1,4 @@
+vhdl work "d_ff.vhd"
+vhdl work "lowpass_processing.vhd"
+vhdl work "fifo.vhd"
+vhdl work "lowpass_filter.vhd"

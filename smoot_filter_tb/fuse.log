@@ -1,0 +1,35 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_tb_isim_beh.exe -prj C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_tb_beh.prj work.lowpass_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/d_ff.vhd" into library work
+Parsing VHDL file "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_processing.vhd" into library work
+Parsing VHDL file "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/fifo.vhd" into library work
+Parsing VHDL file "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_filter.vhd" into library work
+Parsing VHDL file "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_tb.vhd" into library work
+WARNING:HDLCompiler:1369 - "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_tb.vhd" Line 130: Possible infinite loop; process does not have a wait statement
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture d_ff_arch of entity d_ff [\d_ff(8)\]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_ss [\fifo_generator_v9_3_bhv_ss(7,8,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(1,0,7,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(1,0,7,"Blan...]
+Compiling architecture fifo_a of entity fifo [fifo_default]
+Compiling architecture d_ff_arch of entity d_ff [\d_ff(13)\]
+Compiling architecture lowpass_processing_arch of entity lowpass_processing [lowpass_processing_default]
+Compiling architecture lowpass_filter_arch of entity lowpass_filter [lowpass_filter_default]
+Compiling architecture behavior of entity lowpass_tb
+Time Resolution for simulation is 1ps.
+Waiting for 11 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smoot_filter_tb/lowpass_tb_isim_beh.exe
+Fuse Memory Usage: 41960 KB
+Fuse CPU Usage: 1015 ms
