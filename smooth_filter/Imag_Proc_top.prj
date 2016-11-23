@@ -1,0 +1,6 @@
+vhdl work "ipcore_dir/fifo.vhd"
+vhdl work "d_ff.vhd"
+vhdl work "lowpass_processing.vhd"
+vhdl work "lowpass_filter.vhd"
+vhdl work "DataFlow_Display.vhd"
+vhdl work "Imag_proc_top.vhd"

@@ -1,0 +1,4 @@
+work	"d_ff.vhd"
+work	"ipcore_dir/fifo.vhd"
+work	"lowpass_filter.vhd"
+work	"lowpass_processing.vhd"

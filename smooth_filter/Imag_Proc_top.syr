@@ -1,0 +1,887 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Imag_Proc_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Imag_Proc_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Imag_Proc_top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Imag_Proc_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\ipcore_dir\fifo.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <fifo_a> of entity <fifo>.
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\d_ff.vhd" into library work
+Parsing entity <d_ff>.
+Parsing architecture <d_ff_arch> of entity <d_ff>.
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd" into library work
+Parsing entity <lowpass_processing>.
+Parsing architecture <lowpass_processing_arch> of entity <lowpass_processing>.
+WARNING:HDLCompiler:946 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd" Line 92: Actual for formal port d is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" into library work
+Parsing entity <lowpass_filter>.
+Parsing architecture <lowpass_filter_arch> of entity <lowpass_filter>.
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd" into library work
+Parsing entity <DataFlow_Display>.
+Parsing architecture <DataFlow_Display_arch> of entity <dataflow_display>.
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd" into library work
+Parsing entity <Imag_Proc_top>.
+Parsing architecture <Imag_Proc_top_arch> of entity <imag_proc_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Imag_Proc_top> (architecture <Imag_Proc_top_arch>) from library <work>.
+
+Elaborating entity <DataFlow_Display> (architecture <DataFlow_Display_arch>) from library <work>.
+WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd" Line 59: <fifo_imag_9b_16700> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd" Line 75: <vga_df> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd" Line 66: <imgrom_pixgl8b> remains a black-box since it has no binding entity.
+
+Elaborating entity <lowpass_filter> (architecture <lowpass_filter_arch>) from library <work>.
+
+Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
+
+Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
+
+Elaborating entity <lowpass_processing> (architecture <lowpass_processing_arch>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd" Line 82: Using initial value "0001" for mask since it is never assigned
+
+Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd" Line 113: Net <Switch_start> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Imag_Proc_top>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd".
+WARNING:Xst:647 - Input <ISRealFreq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISPureFreq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISFIFO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISFast> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISSlow> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISVolUp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISVolDown> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISSiren> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ISMusic> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <Switch_start> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 14-bit register for signal <addra>.
+    Found 3-bit register for signal <STATEG>.
+    Found 1-bit register for signal <ena>.
+    Found 1-bit register for signal <LED<5>>.
+    Found 1-bit register for signal <LED<4>>.
+    Found 1-bit register for signal <wr_en_fifo_orig>.
+    Found 1-bit register for signal <wr_en_fifo_proc>.
+    Found 1-bit register for signal <data_fifo_orig_ready>.
+    Found 1-bit register for signal <data_fifo_proc_ready>.
+INFO:Xst:1799 - State s4 is never reached in FSM <STATEG>.
+INFO:Xst:1799 - State s5 is never reached in FSM <STATEG>.
+    Found finite state machine <FSM_0> for signal <STATEG>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk_int (rising_edge)                          |
+    | Reset              | rst_i (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s1                                             |
+    | Power Up State     | s1                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 14-bit adder for signal <addra[13]_GND_6_o_add_2_OUT> created at line 208.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Imag_Proc_top> synthesized.
+
+Synthesizing Unit <DataFlow_Display>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd".
+WARNING:Xst:647 - Input <Switch_start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <DataFlow_Display> synthesized.
+
+Synthesizing Unit <lowpass_filter>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd".
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 141: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 141: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 149: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 149: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <input_1>.
+    Found 8-bit register for signal <input_2>.
+    Found 8-bit register for signal <input_3>.
+    Found 8-bit register for signal <input_4>.
+    Found 8-bit register for signal <input_5>.
+    Found 8-bit register for signal <input_6>.
+    Found 8-bit register for signal <input_7>.
+    Found 8-bit register for signal <input_8>.
+    Found 8-bit register for signal <input_9>.
+    Found 1-bit register for signal <flag>.
+    Summary:
+	inferred  73 D-type flip-flop(s).
+Unit <lowpass_filter> synthesized.
+
+Synthesizing Unit <d_ff_1>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\d_ff.vhd".
+        BUS_WIDTH = 8
+    Found 8-bit register for signal <temp>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <d_ff_1> synthesized.
+
+Synthesizing Unit <lowpass_processing>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd".
+    Found 16-bit register for signal <adder_1>.
+    Found 16-bit register for signal <adder_2>.
+    Found 16-bit register for signal <adder_3>.
+    Found 16-bit register for signal <adder_4>.
+    Found 16-bit register for signal <adder_5>.
+    Found 16-bit register for signal <adder_6>.
+    Found 16-bit register for signal <adder_7>.
+    Found 16-bit register for signal <adder_8>.
+    Found 8-bit register for signal <Q>.
+    Found 8-bit register for signal <pxl_2>.
+    Found 8-bit register for signal <pxl_3>.
+    Found 8-bit register for signal <pxl_4>.
+    Found 8-bit register for signal <pxl_5>.
+    Found 8-bit register for signal <pxl_6>.
+    Found 8-bit register for signal <pxl_7>.
+    Found 8-bit register for signal <pxl_8>.
+    Found 8-bit register for signal <pxl_9>.
+    Found 8-bit register for signal <pxl_1>.
+    Found 16-bit adder for signal <pxl_1[12]_pxl_2[12]_add_0_OUT> created at line 113.
+    Found 16-bit adder for signal <pxl_3[12]_pxl_4[12]_add_1_OUT> created at line 114.
+    Found 16-bit adder for signal <pxl_5[12]_pxl_6[12]_add_2_OUT> created at line 115.
+    Found 16-bit adder for signal <pxl_7[12]_pxl_8[12]_add_3_OUT> created at line 116.
+    Found 16-bit adder for signal <adder_1[15]_adder_2[15]_add_4_OUT> created at line 119.
+    Found 16-bit adder for signal <adder_3[15]_adder_4[15]_add_5_OUT> created at line 120.
+    Found 16-bit adder for signal <adder_5[15]_adder_6[15]_add_6_OUT> created at line 123.
+    Found 16-bit adder for signal <adder_7[15]_pxl_9_temp3[12]_add_7_OUT> created at line 126.
+    Found 16-bit adder for signal <GND_33_o_GND_33_o_add_8_OUT> created at line 126.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_2<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_3<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_4<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_5<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_6<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_7<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_8<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_9<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    WARNING:Xst:2404 -  FFs/Latches <pxl_1<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred 208 D-type flip-flop(s).
+Unit <lowpass_processing> synthesized.
+
+Synthesizing Unit <d_ff_2>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\d_ff.vhd".
+        BUS_WIDTH = 13
+    Found 13-bit register for signal <temp>.
+    Summary:
+	inferred  13 D-type flip-flop(s).
+Unit <d_ff_2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 9
+# Registers                                            : 48
+ 1-bit register                                        : 8
+ 13-bit register                                       : 3
+ 14-bit register                                       : 1
+ 16-bit register                                       : 8
+ 8-bit register                                        : 28
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 14-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <imgRom_pixGL8b.ngc>.
+Reading core <fifo_imag_9b_16700.ngc>.
+Reading core <Vga_df.ngc>.
+Reading core <imgROM_pixRGB_12b.ngc>.
+Reading core <ipcore_dir/fifo.ngc>.
+Loading core <imgRom_pixGL8b> for timing and area information for instance <img_lena_8bits>.
+Loading core <fifo_imag_9b_16700> for timing and area information for instance <fifo_orig>.
+Loading core <fifo_imag_9b_16700> for timing and area information for instance <fifo_proc>.
+Loading core <imgROM_pixRGB_12b> for timing and area information for instance <Inst_mp/logo_annee>.
+Loading core <Vga_df> for timing and area information for instance <Inst_VGA>.
+Loading core <fifo> for timing and area information for instance <fifo_1>.
+Loading core <fifo> for timing and area information for instance <fifo_2>.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <d_ff_temp1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <d_ff_temp1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <d_ff_temp1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <d_ff_temp1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <d_ff_temp1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <d_ff_temp2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <d_ff_temp2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <d_ff_temp2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <d_ff_temp2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <d_ff_temp2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_8> has a constant value of 0 in block <d_ff_temp3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_9> has a constant value of 0 in block <d_ff_temp3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_10> has a constant value of 0 in block <d_ff_temp3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_11> has a constant value of 0 in block <d_ff_temp3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_12> has a constant value of 0 in block <d_ff_temp3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <adder_8_0> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_1> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_2> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_11> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_12> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_13> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_14> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <adder_8_15> of sequential type is unconnected in block <filter>.
+
+Synthesizing (advanced) Unit <Imag_Proc_top>.
+The following registers are absorbed into counter <addra>: 1 register on signal <addra>.
+Unit <Imag_Proc_top> synthesized (advanced).
+WARNING:Xst:2677 - Node <adder_8_0> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_1> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_2> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_11> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_12> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_13> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_14> of sequential type is unconnected in block <lowpass_processing>.
+WARNING:Xst:2677 - Node <adder_8_15> of sequential type is unconnected in block <lowpass_processing>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 16-bit adder                                          : 9
+# Counters                                             : 1
+ 14-bit up counter                                     : 1
+# Registers                                            : 391
+ Flip-Flops                                            : 391
+# FSMs                                                 : 1
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <STATEG[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ s1    | 00
+ s2    | 01
+ s3    | 10
+ s4    | unreached
+ s5    | unreached
+-------------------
+WARNING:Xst:1710 - FF/Latch <adder_4_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_4_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_4_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_4_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_4_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_4_10> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_4_9> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_10> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_2_9> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_9> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_10> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_3_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_9> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_10> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_1_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_5_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_5_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_5_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_5_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_5_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_5_10> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_6_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_6_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_6_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_6_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_6_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_6_10> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_11> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_12> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <wr_en_fifo_orig> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <wr_en_fifo_proc> 
+INFO:Xst:2261 - The FF/Latch <data_fifo_proc_ready> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <data_fifo_orig_ready> 
+
+Optimizing unit <d_ff_1> ...
+
+Optimizing unit <d_ff_2> ...
+
+Optimizing unit <Imag_Proc_top> ...
+
+Optimizing unit <lowpass_filter> ...
+
+Optimizing unit <lowpass_processing> ...
+WARNING:Xst:1293 - FF/Latch <smooth/filter/d_ff_temp1/temp_12> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <smooth/filter/d_ff_temp1/temp_11> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <smooth/filter/d_ff_temp1/temp_10> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <smooth/filter/d_ff_temp1/temp_9> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <smooth/filter/d_ff_temp1/temp_8> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp2/temp_12> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp2/temp_11> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp2/temp_10> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp2/temp_9> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp2/temp_8> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_12> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_11> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_10> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_9> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_8> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LED_5> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <data_fifo_proc_ready> 
+INFO:Xst:2261 - The FF/Latch <STATEG_FSM_FFd2> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <ena> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Imag_Proc_top, actual ratio is 1.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <smooth/fifo_2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <smooth/fifo_2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <smooth/fifo_2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <smooth/fifo_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <smooth/fifo_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <smooth/fifo_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Inst_DataFlow_Display/fifo_proc> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Inst_DataFlow_Display/fifo_orig> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <smooth/fifo_2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <smooth/fifo_2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <smooth/fifo_2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <smooth/fifo_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <smooth/fifo_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <smooth/fifo_1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+
+Final Macro Processing ...
+
+Processing Unit <Imag_Proc_top> :
+	Found 2-bit shift register for signal <smooth/filter/Q_7>.
+	Found 2-bit shift register for signal <smooth/filter/Q_6>.
+	Found 2-bit shift register for signal <smooth/filter/Q_5>.
+	Found 2-bit shift register for signal <smooth/filter/Q_4>.
+	Found 2-bit shift register for signal <smooth/filter/Q_3>.
+	Found 2-bit shift register for signal <smooth/filter/Q_2>.
+	Found 2-bit shift register for signal <smooth/filter/Q_1>.
+	Found 2-bit shift register for signal <smooth/filter/Q_0>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_7>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_6>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_5>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_4>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_3>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_2>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_1>.
+	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_0>.
+Unit <Imag_Proc_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 295
+ Flip-Flops                                            : 295
+# Shift Registers                                      : 16
+ 2-bit shift register                                  : 8
+ 4-bit shift register                                  : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Imag_Proc_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1503
+#      GND                         : 12
+#      INV                         : 16
+#      LUT1                        : 127
+#      LUT2                        : 232
+#      LUT3                        : 37
+#      LUT4                        : 174
+#      LUT5                        : 67
+#      LUT6                        : 235
+#      MUXCY                       : 322
+#      MUXF7                       : 21
+#      VCC                         : 8
+#      XORCY                       : 252
+# FlipFlops/Latches                : 1045
+#      FD                          : 196
+#      FDC                         : 368
+#      FDCE                        : 243
+#      FDE                         : 37
+#      FDP                         : 58
+#      FDPE                        : 6
+#      FDR                         : 90
+#      FDRE                        : 47
+# RAMS                             : 67
+#      RAMB18E1                    : 4
+#      RAMB36E1                    : 63
+# Shift Registers                  : 28
+#      SRLC16E                     : 28
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 33
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 30
+# Others                           : 1
+#      MMCME2_ADV                  : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1045  out of  126800     0%  
+ Number of Slice LUTs:                  916  out of  63400     1%  
+    Number used as Logic:               888  out of  63400     1%  
+    Number used as Memory:               28  out of  19000     0%  
+       Number used as SRL:               28
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1513
+   Number with an unused Flip Flop:     468  out of   1513    30%  
+   Number with an unused LUT:           597  out of   1513    39%  
+   Number of fully used LUT-FF pairs:   448  out of   1513    29%  
+   Number of unique control sets:        60
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  33  out of    210    15%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               65  out of    135    48%  
+    Number using Block RAM only:         65
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------+--------------------------------------------------------------------------------------+-------+
+Clock Signal                                         | Clock buffer(FF name)                                                                | Load  |
+-----------------------------------------------------+--------------------------------------------------------------------------------------+-------+
+clk_i                                                | IBUFG+BUFG                                                                           | 755   |
+Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0| BUFG                                                                                 | 401   |
+Inst_DataFlow_Display/Inst_VGA/N1                    | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary191)| 40    |
+-----------------------------------------------------+--------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                        | Buffer(FF name)                                                                                                                                                                                                             | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Inst_DataFlow_Display/Inst_VGA/N0(Inst_DataFlow_Display/Inst_VGA/XST_VCC:P)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary31)                                                                                                                                        | 4960  |
+Inst_DataFlow_Display/Inst_VGA/N1(Inst_DataFlow_Display/Inst_VGA/XST_GND:G)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary31)                                                                                                                                        | 2880  |
+Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
+Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
+img_lena_8bits/N1(img_lena_8bits/XST_GND:G)                                                                                                                                                                                                                                                                                                           | NONE(img_lena_8bits/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                                                        | 8     |
+Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/N1(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/XST_GND:G)                                                                                                                                                                                                                                     | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                     | 6     |
+Inst_DataFlow_Display/Inst_VGA/N100(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary161:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary16)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N102(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary201:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary20)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N104(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary181:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary18)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N106(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary191:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary19)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N68(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary21:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary2)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N70(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary110:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary1)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N72(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary51:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary5)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N74(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary31:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary3)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N76(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary41:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary4)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N78(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary8)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N80(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary61:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary6)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N82(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary71:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary7)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N84(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary111:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary11)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N86(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary91:CASCADEOUTA)                                                                                                                                                                                                                        | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary9)                                                                                                                                         | 2     |
+Inst_DataFlow_Display/Inst_VGA/N88(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary101:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary10)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N90(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary141:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary14)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N92(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary121:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary12)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N94(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary131:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary13)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N96(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary171:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary17)                                                                                                                                        | 2     |
+Inst_DataFlow_Display/Inst_VGA/N98(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary151:CASCADEOUTA)                                                                                                                                                                                                                       | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary15)                                                                                                                                        | 2     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.596ns (Maximum Frequency: 278.064MHz)
+   Minimum input arrival time before clock: 0.747ns
+   Maximum output required time after clock: 0.654ns
+   Maximum combinational path delay: 0.398ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_i'
+  Clock period: 2.632ns (frequency: 379.997MHz)
+  Total number of paths / destination ports: 5297 / 1440
+-------------------------------------------------------------------------
+Delay:               2.632ns (Levels of Logic = 16)
+  Source:            addra_0 (FF)
+  Destination:       addra_13 (FF)
+  Source Clock:      clk_i rising
+  Destination Clock: clk_i rising
+
+  Data Path: addra_0 to addra_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            21   0.361   0.370  addra_0 (addra_0)
+     INV:I->O              1   0.113   0.000  Mcount_addra_lut<0>_INV_0 (Mcount_addra_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mcount_addra_cy<0> (Mcount_addra_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<1> (Mcount_addra_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<2> (Mcount_addra_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<3> (Mcount_addra_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<4> (Mcount_addra_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<5> (Mcount_addra_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<6> (Mcount_addra_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<7> (Mcount_addra_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<8> (Mcount_addra_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<9> (Mcount_addra_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<10> (Mcount_addra_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_addra_cy<11> (Mcount_addra_cy<11>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_addra_cy<12> (Mcount_addra_cy<12>)
+     XORCY:CI->O           1   0.370   0.683  Mcount_addra_xor<13> (Result<13>)
+     LUT5:I0->O            1   0.097   0.000  Mcount_addra_eqn_131 (Mcount_addra_eqn_13)
+     FDCE:D                    0.008          addra_13
+    ----------------------------------------
+    Total                      2.632ns (1.578ns logic, 1.054ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0'
+  Clock period: 3.596ns (frequency: 278.064MHz)
+  Total number of paths / destination ports: 13156 / 696
+-------------------------------------------------------------------------
+Delay:               3.596ns (Levels of Logic = 6)
+  Source:            Inst_DataFlow_Display/Inst_VGA/v_cntr_reg_dly_0 (FF)
+  Destination:       Inst_DataFlow_Display/Inst_VGA/vga_green_reg_2 (FF)
+  Source Clock:      Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0 rising
+  Destination Clock: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0 rising
+
+  Data Path: Inst_DataFlow_Display/Inst_VGA/v_cntr_reg_dly_0 to Inst_DataFlow_Display/Inst_VGA/vga_green_reg_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.361   0.702  v_cntr_reg_dly_0 (v_cntr_reg_dly<0>)
+     LUT5:I0->O            1   0.097   0.379  rd_en_fifo_orig12 (rd_en_fifo_orig12)
+     LUT6:I4->O            2   0.097   0.383  rd_en_fifo_orig13 (rd_en_fifo_orig1)
+     LUT6:I4->O           17   0.097   0.370  GND_6_o_GND_6_o_AND_34_o1 (GND_6_o_GND_6_o_AND_34_o)
+     LUT6:I5->O            2   0.097   0.516  vga_green_cmb<2>1121 (vga_green_cmb<2>112)
+     LUT6:I3->O            1   0.097   0.295  vga_green_cmb<2>11 (vga_green_cmb<2>1)
+     LUT6:I5->O            1   0.097   0.000  vga_green_cmb<2> (vga_green_cmb<2>)
+     FD:D                      0.008          vga_green_reg_2
+    ----------------------------------------
+    Total                      3.596ns (0.951ns logic, 2.645ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
+  Total number of paths / destination ports: 102 / 102
+-------------------------------------------------------------------------
+Offset:              0.747ns (Levels of Logic = 1)
+  Source:            rst_i (PAD)
+  Destination:       LED_4 (FF)
+  Destination Clock: clk_i rising
+
+  Data Path: rst_i to LED_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           104   0.001   0.397  rst_i_IBUF (LED_3_OBUF)
+     FDCE:CLR                  0.349          LED_4
+    ----------------------------------------
+    Total                      0.747ns (0.350ns logic, 0.397ns route)
+                                       (46.8% logic, 53.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.747ns (Levels of Logic = 2)
+  Source:            rst_i (PAD)
+  Destination:       Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg (FF)
+  Destination Clock: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0 rising
+
+  Data Path: rst_i to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           104   0.001   0.397  rst_i_IBUF (LED_3_OBUF)
+     begin scope: 'Inst_DataFlow_Display/fifo_proc:rst'
+     FDP:PRE                   0.349          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg
+    ----------------------------------------
+    Total                      0.747ns (0.350ns logic, 0.397ns route)
+                                       (46.8% logic, 53.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.654ns (Levels of Logic = 1)
+  Source:            LED_5 (FF)
+  Destination:       LED<5> (PAD)
+  Source Clock:      clk_i rising
+
+  Data Path: LED_5 to LED<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.361   0.293  LED_5 (LED_5)
+     OBUF:I->O                 0.000          LED_5_OBUF (LED<5>)
+    ----------------------------------------
+    Total                      0.654ns (0.361ns logic, 0.293ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              0.645ns (Levels of Logic = 2)
+  Source:            Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i (FF)
+  Destination:       LED<0> (PAD)
+  Source Clock:      Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0 rising
+
+  Data Path: Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i to LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.361   0.283  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i (empty)
+     end scope: 'Inst_DataFlow_Display/fifo_orig:empty'
+     OBUF:I->O                 0.000          LED_0_OBUF (LED<0>)
+    ----------------------------------------
+    Total                      0.645ns (0.361ns logic, 0.283ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.398ns (Levels of Logic = 2)
+  Source:            rst_i (PAD)
+  Destination:       LED<3> (PAD)
+
+  Data Path: rst_i to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           104   0.001   0.397  rst_i_IBUF (LED_3_OBUF)
+     OBUF:I->O                 0.000          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                      0.398ns (0.001ns logic, 0.397ns route)
+                                       (0.3% logic, 99.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0
+-----------------------------------------------------+---------+---------+---------+---------+
+                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------+---------+---------+---------+---------+
+Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0|    3.596|         |         |         |
+Inst_DataFlow_Display/Inst_VGA/N1                    |    6.085|         |         |         |
+clk_i                                                |    2.122|         |         |         |
+-----------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_i
+-----------------------------------------------------+---------+---------+---------+---------+
+                                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------+---------+---------+---------+---------+
+Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0|    0.850|         |         |         |
+clk_i                                                |    2.632|         |         |         |
+-----------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 44.21 secs
+ 
+--> 
+
+Total memory usage is 480164 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  117 (   0 filtered)
+Number of infos    :   39 (   0 filtered)
+
