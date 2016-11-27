@@ -1,4 +1,0 @@
-vhdl work "ipcore_dir/fifo.vhd"
-vhdl work "d_ff.vhd"
-vhdl work "lowpass_processing.vhd"
-vhdl work "lowpass_filter.vhd"

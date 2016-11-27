@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: Imag_Proc_top.prj
 
@@ -108,23 +108,23 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\ipcore_dir\fifo.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\ipcore_dir\fifo.vhd" into library work
 Parsing entity <fifo>.
 Parsing architecture <fifo_a> of entity <fifo>.
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\d_ff.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\d_ff.vhd" into library work
 Parsing entity <d_ff>.
 Parsing architecture <d_ff_arch> of entity <d_ff>.
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" into library work
 Parsing entity <lowpass_processing>.
 Parsing architecture <lowpass_processing_arch> of entity <lowpass_processing>.
-WARNING:HDLCompiler:946 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd" Line 92: Actual for formal port d is neither a static name nor a globally static expression
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" into library work
+WARNING:HDLCompiler:946 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" Line 92: Actual for formal port d is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" into library work
 Parsing entity <lowpass_filter>.
 Parsing architecture <lowpass_filter_arch> of entity <lowpass_filter>.
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\DataFlow_Display.vhd" into library work
 Parsing entity <DataFlow_Display>.
 Parsing architecture <DataFlow_Display_arch> of entity <dataflow_display>.
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" into library work
 Parsing entity <Imag_Proc_top>.
 Parsing architecture <Imag_Proc_top_arch> of entity <imag_proc_top>.
 
@@ -135,9 +135,9 @@ Parsing architecture <Imag_Proc_top_arch> of entity <imag_proc_top>.
 Elaborating entity <Imag_Proc_top> (architecture <Imag_Proc_top_arch>) from library <work>.
 
 Elaborating entity <DataFlow_Display> (architecture <DataFlow_Display_arch>) from library <work>.
-WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd" Line 59: <fifo_imag_9b_16700> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd" Line 75: <vga_df> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd" Line 66: <imgrom_pixgl8b> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\DataFlow_Display.vhd" Line 59: <fifo_imag_9b_16700> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\DataFlow_Display.vhd" Line 75: <vga_df> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" Line 66: <imgrom_pixgl8b> remains a black-box since it has no binding entity.
 
 Elaborating entity <lowpass_filter> (architecture <lowpass_filter_arch>) from library <work>.
 
@@ -146,17 +146,17 @@ Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library 
 Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
 
 Elaborating entity <lowpass_processing> (architecture <lowpass_processing_arch>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd" Line 82: Using initial value "0001" for mask since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" Line 82: Using initial value "0001" for mask since it is never assigned
 
 Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd" Line 113: Net <Switch_start> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" Line 113: Net <Switch_start> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <Imag_Proc_top>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\Imag_proc_top.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd".
 WARNING:Xst:647 - Input <ISRealFreq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ISPureFreq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ISFIFO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -201,18 +201,18 @@ INFO:Xst:1799 - State s5 is never reached in FSM <STATEG>.
 Unit <Imag_Proc_top> synthesized.
 
 Synthesizing Unit <DataFlow_Display>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\DataFlow_Display.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\DataFlow_Display.vhd".
 WARNING:Xst:647 - Input <Switch_start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <DataFlow_Display> synthesized.
 
 Synthesizing Unit <lowpass_filter>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd".
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 141: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 141: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 149: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_filter.vhd" line 149: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd".
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 141: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 141: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 149: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 149: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
     Found 8-bit register for signal <input_1>.
     Found 8-bit register for signal <input_2>.
     Found 8-bit register for signal <input_3>.
@@ -228,7 +228,7 @@ INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoo
 Unit <lowpass_filter> synthesized.
 
 Synthesizing Unit <d_ff_1>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\d_ff.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\d_ff.vhd".
         BUS_WIDTH = 8
     Found 8-bit register for signal <temp>.
     Summary:
@@ -236,7 +236,7 @@ Synthesizing Unit <d_ff_1>.
 Unit <d_ff_1> synthesized.
 
 Synthesizing Unit <lowpass_processing>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\lowpass_processing.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd".
     Found 16-bit register for signal <adder_1>.
     Found 16-bit register for signal <adder_2>.
     Found 16-bit register for signal <adder_3>.
@@ -279,7 +279,7 @@ Synthesizing Unit <lowpass_processing>.
 Unit <lowpass_processing> synthesized.
 
 Synthesizing Unit <d_ff_2>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smooth_filter\d_ff.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\d_ff.vhd".
         BUS_WIDTH = 13
     Found 13-bit register for signal <temp>.
     Summary:
@@ -646,12 +646,12 @@ Asynchronous Control Signals Information:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                                                                                        | Buffer(FF name)                                                                                                                                                                                                             | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Inst_DataFlow_Display/Inst_VGA/N0(Inst_DataFlow_Display/Inst_VGA/XST_VCC:P)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary31)                                                                                                                                        | 4960  |
-Inst_DataFlow_Display/Inst_VGA/N1(Inst_DataFlow_Display/Inst_VGA/XST_GND:G)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary31)                                                                                                                                        | 2880  |
+Inst_DataFlow_Display/Inst_VGA/N0(Inst_DataFlow_Display/Inst_VGA/XST_VCC:P)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary111)                                                                                                                                       | 4960  |
+Inst_DataFlow_Display/Inst_VGA/N1(Inst_DataFlow_Display/Inst_VGA/XST_GND:G)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary111)                                                                                                                                       | 2880  |
 Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
-Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
-img_lena_8bits/N1(img_lena_8bits/XST_GND:G)                                                                                                                                                                                                                                                                                                           | NONE(img_lena_8bits/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                                                        | 8     |
-Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/N1(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/XST_GND:G)                                                                                                                                                                                                                                     | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                     | 6     |
+Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
+img_lena_8bits/N1(img_lena_8bits/XST_GND:G)                                                                                                                                                                                                                                                                                                           | NONE(img_lena_8bits/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                                                        | 8     |
+Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/N1(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/XST_GND:G)                                                                                                                                                                                                                                     | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                     | 6     |
 Inst_DataFlow_Display/Inst_VGA/N100(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary161:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary16)                                                                                                                                        | 2     |
 Inst_DataFlow_Display/Inst_VGA/N102(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary201:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary20)                                                                                                                                        | 2     |
 Inst_DataFlow_Display/Inst_VGA/N104(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary181:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary18)                                                                                                                                        | 2     |
@@ -874,12 +874,12 @@ clk_i                                                |    2.632|         |      
 =========================================================================
 
 
-Total REAL time to Xst completion: 45.00 secs
-Total CPU time to Xst completion: 44.21 secs
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 50.88 secs
  
 --> 
 
-Total memory usage is 480164 kilobytes
+Total memory usage is 480456 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  117 (   0 filtered)

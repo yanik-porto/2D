@@ -66,7 +66,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1479910180" xil_pn:in_ck="-6711033655374120940" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1479910180">
+    <transform xil_pn:end_ts="1480244055" xil_pn:in_ck="-6711033655374120940" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1480244055">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="d_ff.vhd"/>
@@ -87,7 +87,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1479910183" xil_pn:in_ck="-6711033655374120940" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1479910183">
+    <transform xil_pn:end_ts="1480244062" xil_pn:in_ck="-6711033655374120940" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1480244062">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="d_ff.vhd"/>
@@ -96,7 +96,7 @@
       <outfile xil_pn:name="lowpass_processing.vhd"/>
       <outfile xil_pn:name="lowpass_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1479910191" xil_pn:in_ck="-6711033655374120940" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1253242257956816600" xil_pn:start_ts="1479910183">
+    <transform xil_pn:end_ts="1480244070" xil_pn:in_ck="-6711033655374120940" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1253242257956816600" xil_pn:start_ts="1480244062">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -106,7 +106,7 @@
       <outfile xil_pn:name="lowpass_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1479910191" xil_pn:in_ck="-2538381609186124499" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7743110142746298523" xil_pn:start_ts="1479910191">
+    <transform xil_pn:end_ts="1480244071" xil_pn:in_ck="-2538381609186124499" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7743110142746298523" xil_pn:start_ts="1480244070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -141,12 +141,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1479891779" xil_pn:in_ck="-6934300009598186234" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1169248133125145772" xil_pn:start_ts="1479891755">
+    <transform xil_pn:end_ts="1480241844" xil_pn:in_ck="-6934300009598186234" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1169248133125145772" xil_pn:start_ts="1480241822">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="lowpass_filter.lso"/>
       <outfile xil_pn:name="lowpass_filter.ngc"/>
@@ -163,10 +161,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1479897482" xil_pn:in_ck="5220772307398681588" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-9155878128518406400" xil_pn:start_ts="1479897459">
+    <transform xil_pn:end_ts="1480241547" xil_pn:in_ck="5220772307398681588" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-9155878128518406400" xil_pn:start_ts="1480241526">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="lowpass_filter.bld"/>

@@ -47,6 +47,7 @@ ARCHITECTURE behavior OF lowpass_tb IS
          Q_i : OUT  std_logic_vector(7 downto 0);
          R_i : IN  std_logic;
          CLK_i : IN  std_logic
+			--start_process : IN std_logic;
         );
     END COMPONENT;
     
@@ -55,6 +56,7 @@ ARCHITECTURE behavior OF lowpass_tb IS
    signal D_i : std_logic_vector(7 downto 0) := (others => '0');
    signal R_i : std_logic := '0';
    signal CLK_i : std_logic := '0';
+	--signal start_process : std_logic := '0';
 
  	--Outputs
    signal Q_i : std_logic_vector(7 downto 0);
@@ -64,16 +66,18 @@ ARCHITECTURE behavior OF lowpass_tb IS
 	
 	signal I1 : std_logic_vector(7 downto 0) := (others => '0');
 	signal counter : integer:=0;
+	signal counter_end : integer:=0;
 	signal thresh: integer:=0;
 	signal blurred : std_logic_vector(7 downto 0);
 	signal flag: STD_LOGIC:= '0';
 	signal flag_endfile: STD_LOGIC:= '0';
+	signal flag_write: STD_LOGIC:= '0';
 	
 	signal dataread: std_logic_vector (7 downto 0):= (others => '0');
  
 BEGIN
 
-	thresh <= 259;
+	thresh <= 9;
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: lowpass_filter PORT MAP (
@@ -81,6 +85,7 @@ BEGIN
           Q_i => Q_i,
           R_i => R_i,
           CLK_i => CLK_i
+			 --start_process => start_process
         );
 
    -- Clock process definitions
@@ -90,23 +95,28 @@ BEGIN
 		wait for CLK_i_period/2;
 		CLK_i <= '1';
 		wait for CLK_i_period/2;
-   end process;
+   end process    CLK_i_process;
  
 
    -- Reading process
-   reading: process
+   reading: process(CLK_i)
 	
-	FILE data : text;
+	FILE data : text is in "Lena128x128g_8bits.dat";
    variable sample : line;
 	variable I1_var: std_logic_vector (7 downto 0);
 	
    begin		
 	
-		file_open (data,"Lena128x128g_8bits.dat", read_mode);
 	
-		--wait until CLK_i = '1' and CLK_i'event;
-		while not endfile(data) loop
-			readline (data,sample);
+		
+	 if   CLK_i'event and CLK_i = '1' then 
+	 
+	 -- file_open (data,"Lena128x128g_8bits.dat", read_mode);
+	 
+	--	wait until CLK_i = '1' and CLK_i'event;
+	--	while not endfile(data) loop
+	if (not endfile(data)) then
+			readline (data, sample);
 			read(sample, I1_var);
 			
 			I1 <= I1_var;
@@ -117,36 +127,55 @@ BEGIN
 			end if;
 				
 			counter <= counter + 1;
-		end loop;
+	else
 		
-		flag_endfile <= '1';
-		file_close (data);
-		
-      wait;
+		--if (endfile(data)) then
+			flag_endfile <= '1';
+			-- file_close (data);
+	end if;
+	end if ;
+      
    end process reading;
 	
 	
 	-- Writing process
-	writing: process
+	writing: process(CLK_i)
 	
 	FILE data2 : text;
    variable sample2 : line;
 	
-	begin
-	
-	file_open (data2, "blurred_lena.dat", write_mode);
-	--wait until CLK_i = '0' and CLK_i'event;
-	if(flag = '1' and flag_endfile = '0') then
-		write (sample2, dataread, right, 8);
-		writeline (data2, sample2);
-	else 
-		null;
-	end if;
-	
-	file_close (data2);
+	begin	
+		if CLK_i'event and CLK_i = '0' then 
+		
+			if(flag_endfile = '0' and flag = '1') then
+				if(flag_write = '0') then 
+					file_open (data2, "blurred_lena.dat", write_mode);
+					flag_write <= '1';
+				end if;
+				write (sample2, dataread, right, 8);
+				writeline (data2, sample2);
+			else 
+				null;
+			end if;
+
+			if(flag_endfile = '1') then 
+				counter_end <= counter_end + 1;
+				if(counter_end > thresh) then
+					flag_write <= '0';
+				end if;
+				
+				if(flag_write = '0') then
+					file_close (data2);
+				end if;
+				
+				write (sample2, dataread, right, 8);
+				writeline (data2, sample2);
+				
+			end if;		
+		end if;
 	end process writing;
 	
 	-- Component instantiation
-	lp_filter : lowpass_filter PORT MAP ( D_i => I1, Q_i => blurred , R_i => '0', CLK_i => CLK_i);
+	lp_filter : lowpass_filter PORT MAP ( D_i => I1, Q_i => blurred , R_i => '0', CLK_i => CLK_i);-- start_process => flag);
 
 END;

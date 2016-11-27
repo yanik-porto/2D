@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -105,17 +105,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\d_ff.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\d_ff.vhd" into library work
 Parsing entity <d_ff>.
 Parsing architecture <d_ff_arch> of entity <d_ff>.
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_processing.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_processing.vhd" into library work
 Parsing entity <lowpass_processing>.
 Parsing architecture <lowpass_processing_arch> of entity <lowpass_processing>.
-WARNING:HDLCompiler:946 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_processing.vhd" Line 115: Actual for formal port d is neither a static name nor a globally static expression
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\fifo.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\fifo.vhd" into library work
 Parsing entity <fifo>.
 Parsing architecture <fifo_a> of entity <fifo>.
-Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_filter.vhd" into library work
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" into library work
 Parsing entity <lowpass_filter>.
 Parsing architecture <lowpass_filter_arch> of entity <lowpass_filter>.
 
@@ -124,13 +123,14 @@ Parsing architecture <lowpass_filter_arch> of entity <lowpass_filter>.
 =========================================================================
 
 Elaborating entity <lowpass_filter> (architecture <lowpass_filter_arch>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" Line 118: Using initial value '1' for flag since it is never assigned
 
 Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
 
 Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
 
 Elaborating entity <lowpass_processing> (architecture <lowpass_processing_arch>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_processing.vhd" Line 109: Using initial value "0001" for bit_extend since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_processing.vhd" Line 111: Using initial value "0001" for bit_extend since it is never assigned
 
 Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
 
@@ -139,12 +139,11 @@ Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library 
 =========================================================================
 
 Synthesizing Unit <lowpass_filter>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_filter.vhd".
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_filter.vhd" line 141: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_filter.vhd" line 141: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_filter.vhd" line 149: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_filter.vhd" line 149: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
-    Found 8-bit register for signal <input_1>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd".
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" line 142: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" line 142: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" line 150: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" line 150: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
     Found 8-bit register for signal <input_2>.
     Found 8-bit register for signal <input_3>.
     Found 8-bit register for signal <input_4>.
@@ -153,13 +152,13 @@ INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoo
     Found 8-bit register for signal <input_7>.
     Found 8-bit register for signal <input_8>.
     Found 8-bit register for signal <input_9>.
-    Found 1-bit register for signal <flag>.
+    Found 8-bit register for signal <input_1>.
     Summary:
-	inferred  73 D-type flip-flop(s).
+	inferred  72 D-type flip-flop(s).
 Unit <lowpass_filter> synthesized.
 
 Synthesizing Unit <d_ff_1>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\d_ff.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\d_ff.vhd".
         BUS_WIDTH = 8
     Found 8-bit register for signal <temp>.
     Summary:
@@ -167,7 +166,7 @@ Synthesizing Unit <d_ff_1>.
 Unit <d_ff_1> synthesized.
 
 Synthesizing Unit <lowpass_processing>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\lowpass_processing.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_processing.vhd".
     Found 16-bit register for signal <adder_1>.
     Found 16-bit register for signal <adder_2>.
     Found 16-bit register for signal <adder_3>.
@@ -186,15 +185,15 @@ Synthesizing Unit <lowpass_processing>.
     Found 8-bit register for signal <pxl_8>.
     Found 8-bit register for signal <pxl_9>.
     Found 8-bit register for signal <pxl_1>.
-    Found 16-bit adder for signal <pxl_1[12]_pxl_2[12]_add_0_OUT> created at line 147.
-    Found 16-bit adder for signal <pxl_3[12]_pxl_4[12]_add_1_OUT> created at line 148.
-    Found 16-bit adder for signal <pxl_5[12]_pxl_6[12]_add_2_OUT> created at line 149.
-    Found 16-bit adder for signal <pxl_7[12]_pxl_8[12]_add_3_OUT> created at line 150.
-    Found 16-bit adder for signal <adder_1[15]_adder_2[15]_add_4_OUT> created at line 158.
-    Found 16-bit adder for signal <adder_3[15]_adder_4[15]_add_5_OUT> created at line 159.
-    Found 16-bit adder for signal <adder_5[15]_adder_6[15]_add_6_OUT> created at line 162.
-    Found 16-bit adder for signal <adder_7[15]_pxl_9_temp3[12]_add_7_OUT> created at line 165.
-    Found 16-bit adder for signal <GND_11_o_GND_11_o_add_8_OUT> created at line 165.
+    Found 16-bit adder for signal <pxl_1[12]_pxl_2[12]_add_1_OUT> created at line 150.
+    Found 16-bit adder for signal <pxl_3[12]_pxl_4[12]_add_2_OUT> created at line 151.
+    Found 16-bit adder for signal <pxl_5[12]_pxl_6[12]_add_3_OUT> created at line 152.
+    Found 16-bit adder for signal <pxl_7[12]_pxl_8[12]_add_4_OUT> created at line 153.
+    Found 16-bit adder for signal <adder_1[15]_adder_2[15]_add_5_OUT> created at line 161.
+    Found 16-bit adder for signal <adder_3[15]_adder_4[15]_add_6_OUT> created at line 162.
+    Found 16-bit adder for signal <adder_5[15]_adder_6[15]_add_7_OUT> created at line 165.
+    Found 16-bit adder for signal <adder_7[15]_pxl_9_temp3[12]_add_8_OUT> created at line 168.
+    Found 16-bit adder for signal <GND_11_o_GND_11_o_add_9_OUT> created at line 168.
     WARNING:Xst:2404 -  FFs/Latches <pxl_2<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
     WARNING:Xst:2404 -  FFs/Latches <pxl_3<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
     WARNING:Xst:2404 -  FFs/Latches <pxl_4<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
@@ -210,7 +209,7 @@ Synthesizing Unit <lowpass_processing>.
 Unit <lowpass_processing> synthesized.
 
 Synthesizing Unit <d_ff_2>.
-    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\smoot_filter_tb\d_ff.vhd".
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\d_ff.vhd".
         BUS_WIDTH = 13
     Found 13-bit register for signal <temp>.
     Summary:
@@ -223,8 +222,7 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 9
  16-bit adder                                          : 9
-# Registers                                            : 40
- 1-bit register                                        : 1
+# Registers                                            : 39
  13-bit register                                       : 3
  16-bit register                                       : 8
  8-bit register                                        : 28
@@ -275,8 +273,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 9
  16-bit adder                                          : 9
-# Registers                                            : 384
- Flip-Flops                                            : 384
+# Registers                                            : 383
+ Flip-Flops                                            : 383
 # Xors                                                 : 15
  1-bit xor2                                            : 15
 
@@ -331,11 +329,11 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_13> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
 
+Optimizing unit <lowpass_filter> ...
+
 Optimizing unit <d_ff_1> ...
 
 Optimizing unit <d_ff_2> ...
-
-Optimizing unit <lowpass_filter> ...
 
 Optimizing unit <lowpass_processing> ...
 WARNING:Xst:1293 - FF/Latch <filter/d_ff_temp1/temp_12> has a constant value of 0 in block <lowpass_filter>. This FF/Latch will be trimmed during the optimization process.
@@ -361,24 +359,89 @@ Found area constraint ratio of 100 (+ 5) on block lowpass_filter, actual ratio i
 Final Macro Processing ...
 
 Processing Unit <lowpass_filter> :
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_7>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_6>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_5>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_4>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_3>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_2>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_1>.
-	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_0>.
+	Found 2-bit shift register for signal <filter/pxl_8_7>.
+	Found 2-bit shift register for signal <filter/pxl_8_6>.
+	Found 2-bit shift register for signal <filter/pxl_8_5>.
+	Found 2-bit shift register for signal <filter/pxl_8_4>.
+	Found 2-bit shift register for signal <filter/pxl_8_3>.
+	Found 2-bit shift register for signal <filter/pxl_8_2>.
+	Found 2-bit shift register for signal <filter/pxl_8_1>.
+	Found 2-bit shift register for signal <filter/pxl_8_0>.
+	Found 2-bit shift register for signal <filter/pxl_7_7>.
+	Found 2-bit shift register for signal <filter/pxl_7_6>.
+	Found 2-bit shift register for signal <filter/pxl_7_5>.
+	Found 2-bit shift register for signal <filter/pxl_7_4>.
+	Found 2-bit shift register for signal <filter/pxl_7_3>.
+	Found 2-bit shift register for signal <filter/pxl_7_2>.
+	Found 2-bit shift register for signal <filter/pxl_7_1>.
+	Found 2-bit shift register for signal <filter/pxl_7_0>.
+	Found 2-bit shift register for signal <filter/pxl_5_7>.
+	Found 2-bit shift register for signal <filter/pxl_5_6>.
+	Found 2-bit shift register for signal <filter/pxl_5_5>.
+	Found 2-bit shift register for signal <filter/pxl_5_4>.
+	Found 2-bit shift register for signal <filter/pxl_5_3>.
+	Found 2-bit shift register for signal <filter/pxl_5_2>.
+	Found 2-bit shift register for signal <filter/pxl_5_1>.
+	Found 2-bit shift register for signal <filter/pxl_5_0>.
+	Found 2-bit shift register for signal <filter/pxl_4_7>.
+	Found 2-bit shift register for signal <filter/pxl_4_6>.
+	Found 2-bit shift register for signal <filter/pxl_4_5>.
+	Found 2-bit shift register for signal <filter/pxl_4_4>.
+	Found 2-bit shift register for signal <filter/pxl_4_3>.
+	Found 2-bit shift register for signal <filter/pxl_4_2>.
+	Found 2-bit shift register for signal <filter/pxl_4_1>.
+	Found 2-bit shift register for signal <filter/pxl_4_0>.
+	Found 2-bit shift register for signal <filter/pxl_6_7>.
+	Found 2-bit shift register for signal <filter/pxl_6_6>.
+	Found 2-bit shift register for signal <filter/pxl_6_5>.
+	Found 2-bit shift register for signal <filter/pxl_6_4>.
+	Found 2-bit shift register for signal <filter/pxl_6_3>.
+	Found 2-bit shift register for signal <filter/pxl_6_2>.
+	Found 2-bit shift register for signal <filter/pxl_6_1>.
+	Found 2-bit shift register for signal <filter/pxl_6_0>.
+	Found 2-bit shift register for signal <filter/pxl_2_7>.
+	Found 2-bit shift register for signal <filter/pxl_2_6>.
+	Found 2-bit shift register for signal <filter/pxl_2_5>.
+	Found 2-bit shift register for signal <filter/pxl_2_4>.
+	Found 2-bit shift register for signal <filter/pxl_2_3>.
+	Found 2-bit shift register for signal <filter/pxl_2_2>.
+	Found 2-bit shift register for signal <filter/pxl_2_1>.
+	Found 2-bit shift register for signal <filter/pxl_2_0>.
+	Found 2-bit shift register for signal <filter/pxl_1_7>.
+	Found 2-bit shift register for signal <filter/pxl_1_6>.
+	Found 2-bit shift register for signal <filter/pxl_1_5>.
+	Found 2-bit shift register for signal <filter/pxl_1_4>.
+	Found 2-bit shift register for signal <filter/pxl_1_3>.
+	Found 2-bit shift register for signal <filter/pxl_1_2>.
+	Found 2-bit shift register for signal <filter/pxl_1_1>.
+	Found 2-bit shift register for signal <filter/pxl_1_0>.
+	Found 2-bit shift register for signal <filter/pxl_3_7>.
+	Found 2-bit shift register for signal <filter/pxl_3_6>.
+	Found 2-bit shift register for signal <filter/pxl_3_5>.
+	Found 2-bit shift register for signal <filter/pxl_3_4>.
+	Found 2-bit shift register for signal <filter/pxl_3_3>.
+	Found 2-bit shift register for signal <filter/pxl_3_2>.
+	Found 2-bit shift register for signal <filter/pxl_3_1>.
+	Found 2-bit shift register for signal <filter/pxl_3_0>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_7>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_6>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_5>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_4>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_3>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_2>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_1>.
+	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_0>.
 Unit <lowpass_filter> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 292
- Flip-Flops                                            : 292
-# Shift Registers                                      : 8
- 4-bit shift register                                  : 8
+# Registers                                            : 155
+ Flip-Flops                                            : 155
+# Shift Registers                                      : 72
+ 2-bit shift register                                  : 64
+ 5-bit shift register                                  : 8
 
 =========================================================================
 
@@ -401,23 +464,19 @@ Top Level Output File Name         : lowpass_filter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 225
+# BELS                             : 221
 #      GND                         : 1
-#      INV                         : 1
 #      LUT1                        : 2
-#      LUT2                        : 69
-#      LUT3                        : 1
-#      LUT6                        : 1
+#      LUT2                        : 68
 #      MUXCY                       : 70
 #      VCC                         : 1
 #      XORCY                       : 79
-# FlipFlops/Latches                : 300
-#      FD                          : 148
+# FlipFlops/Latches                : 227
+#      FD                          : 83
 #      FDC                         : 72
-#      FDE                         : 8
-#      FDR                         : 72
-# Shift Registers                  : 8
-#      SRLC16E                     : 8
+#      FDE                         : 72
+# Shift Registers                  : 72
+#      SRLC16E                     : 72
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 17
@@ -433,18 +492,18 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             300  out of  126800     0%  
- Number of Slice LUTs:                   82  out of  63400     0%  
-    Number used as Logic:                74  out of  63400     0%  
-    Number used as Memory:                8  out of  19000     0%  
-       Number used as SRL:                8
+ Number of Slice Registers:             227  out of  126800     0%  
+ Number of Slice LUTs:                  142  out of  63400     0%  
+    Number used as Logic:                70  out of  63400     0%  
+    Number used as Memory:               72  out of  19000     0%  
+       Number used as SRL:               72
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    313
-   Number with an unused Flip Flop:      13  out of    313     4%  
-   Number with an unused LUT:           231  out of    313    73%  
-   Number of fully used LUT-FF pairs:    69  out of    313    22%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    237
+   Number with an unused Flip Flop:      10  out of    237     4%  
+   Number with an unused LUT:            95  out of    237    40%  
+   Number of fully used LUT-FF pairs:   132  out of    237    55%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                          18
@@ -474,7 +533,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK_i                              | BUFGP                  | 308   |
+CLK_i                              | BUFGP                  | 299   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -488,7 +547,7 @@ Speed Grade: -3
    Minimum period: 1.948ns (Maximum Frequency: 513.268MHz)
    Minimum input arrival time before clock: 0.742ns
    Maximum output required time after clock: 0.640ns
-   Maximum combinational path delay: 0.428ns
+   Maximum combinational path delay: 0.427ns
 
 Timing Details:
 ---------------
@@ -497,7 +556,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_i'
   Clock period: 1.948ns (frequency: 513.268MHz)
-  Total number of paths / destination ports: 1442 / 356
+  Total number of paths / destination ports: 1353 / 275
 -------------------------------------------------------------------------
 Delay:               1.948ns (Levels of Logic = 13)
   Source:            filter/adder_7_0 (FF)
@@ -510,19 +569,19 @@ Delay:               1.948ns (Levels of Logic = 13)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               1   0.361   0.379  filter/adder_7_0 (filter/adder_7_0)
-     LUT2:I0->O            1   0.097   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_lut<0> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<0> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<1> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<2> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<3> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<4> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<5> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<6> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<7> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<8> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<8>)
-     MUXCY:CI->O           0   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<9> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_cy<9>)
-     XORCY:CI->O           0   0.370   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_7_OUT_xor<10> (filter/adder_7[15]_pxl_9_temp3[12]_add_7_OUT<10>)
-     XORCY:LI->O           1   0.173   0.000  filter/Madd_GND_11_o_GND_11_o_add_8_OUT_xor<10> (filter/GND_11_o_GND_11_o_add_8_OUT<10>)
+     LUT2:I0->O            1   0.097   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_lut<0> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<0> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<1> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<2> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<3> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<4> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<5> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<6> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<7> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<8> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<8>)
+     MUXCY:CI->O           0   0.023   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<9> (filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_cy<9>)
+     XORCY:CI->O           0   0.370   0.000  filter/Madd_adder_7[15]_pxl_9_temp3[12]_add_8_OUT_xor<10> (filter/adder_7[15]_pxl_9_temp3[12]_add_8_OUT<10>)
+     XORCY:LI->O           1   0.173   0.000  filter/Madd_GND_11_o_GND_11_o_add_9_OUT_xor<10> (filter/GND_11_o_GND_11_o_add_9_OUT<10>)
      FD:D                      0.008          filter/adder_8_10
     ----------------------------------------
     Total                      1.948ns (1.569ns logic, 0.379ns route)
@@ -570,7 +629,7 @@ Offset:              0.640ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Delay:               0.428ns (Levels of Logic = 1)
+Delay:               0.427ns (Levels of Logic = 1)
   Source:            CLK_i (PAD)
   Destination:       fifo_1:clk (PAD)
 
@@ -578,10 +637,10 @@ Delay:               0.428ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     BUFGP:I->O          308   0.000   0.428  CLK_i_BUFGP (CLK_i_BUFGP)
+     BUFGP:I->O          299   0.000   0.427  CLK_i_BUFGP (CLK_i_BUFGP)
     fifo:clk                   0.000          fifo_1
     ----------------------------------------
-    Total                      0.428ns (0.000ns logic, 0.428ns route)
+    Total                      0.427ns (0.000ns logic, 0.427ns route)
                                        (0.0% logic, 100.0% route)
 
 =========================================================================
@@ -600,12 +659,12 @@ CLK_i          |    1.948|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.72 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.16 secs
  
 --> 
 
-Total memory usage is 414012 kilobytes
+Total memory usage is 413964 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  102 (   0 filtered)

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-11-23T08:28:54</DateModified>
+  <DateModified>2016-11-25T17:24:32</DateModified>
   <ModuleName>Imag_Proc_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smooth_filter/iseconfig/Imag_Proc_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/smooth_filter\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-11-24T17:00:12</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/iseconfig/Imag_Proc_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter\</ImplementationReportsDirectory>
   <DateInitialized>2016-11-19T13:55:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

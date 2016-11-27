@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Imag_Proc_top.twx Imag_Proc_top.ncd -o Imag_Proc_top.twr
+Imag_Proc_top.pcf
+
+Design file:              Imag_Proc_top.ncd
+Physical constraint file: Imag_Proc_top.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_i
+------------+------------+------------+------------+------------+-------------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                               | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)              | Phase  |
+------------+------------+------------+------------+------------+-------------------------------+--------+
+ISEcho      |   -0.081(R)|      FAST  |    1.879(R)|      SLOW  |clk_int_BUFG                   |   0.000|
+rst_i       |    3.757(R)|      SLOW  |    1.206(R)|      SLOW  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+            |    4.520(R)|      SLOW  |    2.221(R)|      SLOW  |clk_int_BUFG                   |   0.000|
+------------+------------+------------+------------+------------+-------------------------------+--------+
+
+Clock clk_i to Pad
+--------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                               | Clock  |
+Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)              | Phase  |
+--------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+LED<0>        |         8.855(R)|      SLOW  |         3.862(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+LED<2>        |         9.203(R)|      SLOW  |         4.012(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+LED<4>        |         8.136(R)|      SLOW  |         3.491(R)|      FAST  |clk_int_BUFG                   |   0.000|
+LED<5>        |         8.135(R)|      SLOW  |         3.486(R)|      FAST  |clk_int_BUFG                   |   0.000|
+vga_blue_o<0> |         9.133(R)|      SLOW  |         3.994(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_blue_o<1> |         8.886(R)|      SLOW  |         3.873(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_blue_o<2> |         8.627(R)|      SLOW  |         3.702(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_blue_o<3> |         9.035(R)|      SLOW  |         3.962(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_green_o<0>|         8.934(R)|      SLOW  |         3.912(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_green_o<1>|         8.960(R)|      SLOW  |         3.890(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_green_o<2>|         8.887(R)|      SLOW  |         3.905(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_green_o<3>|         8.638(R)|      SLOW  |         3.723(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_hs_o      |         7.822(R)|      SLOW  |         3.289(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_red_o<0>  |         8.779(R)|      SLOW  |         3.789(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_red_o<1>  |         8.970(R)|      SLOW  |         3.915(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_red_o<2>  |         8.911(R)|      SLOW  |         3.881(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_red_o<3>  |         9.276(R)|      SLOW  |         4.099(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+vga_vs_o      |         8.318(R)|      SLOW  |         3.559(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
+--------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+
+Clock to Setup on destination clock clk_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_i          |    7.221|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+rst_i          |LED<3>         |    4.875|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Nov 24 17:07:52 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 692 MB
+
+
+

@@ -6,7 +6,7 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 lowpass_filter.ngd
 
 Reading NGO file "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC -
-Dubois/smoot_filter_tb/lowpass_filter.ngc" ...
+Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -37,10 +37,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     2
   Number of warnings:   0
 
-Total memory usage is 258536 kilobytes
+Total memory usage is 258532 kilobytes
 
 Total REAL time to NGDBUILD completion:  14 sec
-Total CPU time to NGDBUILD completion:   10 sec
+Total CPU time to NGDBUILD completion:   12 sec
 
 One or more errors were found during NGDBUILD.  No NGD file will be written.
 

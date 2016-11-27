@@ -2,9 +2,30 @@ Command line:
    lowpass_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  55602
+     -socket  57418
 
-Wed Nov 23 15:09:53 2016
+Sun Nov 27 11:54:33 2016
 
 
- Elaboration Time: 0.125 sec
+ Elaboration Time: 0.15625 sec
+
+ Current Memory Usage: 1016.82 Meg
+
+ Total Signals          : 2420
+ Total Nets             : 10907
+ Total Signal Drivers   : 941
+ Total Blocks           : 159
+ Total Primitive Blocks : 94
+ Total Processes        : 422
+ Total Traceable Variables  : 1307
+ Total Scalar Nets and Variables : 13458
+Total Line Count : 927
+In process lowpass_tb.vhd:writing 
+ File is NULL, not open in write/append mode : 
+
+ Total Simulation Time: 2.625 sec
+
+ Current Memory Usage: 702.243 Meg
+
+Sun Nov 27 11:59:33 2016
+

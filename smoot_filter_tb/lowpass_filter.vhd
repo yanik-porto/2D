@@ -37,6 +37,7 @@ entity lowpass_filter is
            Q_i : out  STD_LOGIC_VECTOR (7 downto 0);
 			  R_i : IN  std_logic;
 			  CLK_i : IN  std_logic
+			  --start_process : IN std_logic
 			  );
 end lowpass_filter;
 
@@ -114,7 +115,7 @@ signal input_9: STD_LOGIC_VECTOR (7 downto 0);
 signal output: STD_LOGIC_VECTOR (7 downto 0);
  
 -- flag if all 9 pixels read
-signal flag: STD_LOGIC:= '0';
+signal flag: STD_LOGIC:= '1';
 
 -- signals for fifo
 signal rd_en_1: STD_LOGIC;
@@ -169,8 +170,8 @@ cache_mem: process(CLK_i)
 begin 
 
 	if(CLK_i'event and CLK_i = '1') then
-		if (temp9 /= 0) then flag <= '1';
-		end if;
+--		if (temp9 /= 0) then flag <= '1';
+--		end if;
 		-- Send flip flops output to the lowpass filter processing
 		if (flag = '1') then 
 			input_1 <= temp1;
