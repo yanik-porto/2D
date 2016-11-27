@@ -31,4 +31,4 @@ Waiting for 11 sub-compilation(s) to finish...
 Compiled 24 VHDL Units
 Built simulation executable C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_tb_isim_beh.exe
 Fuse Memory Usage: 42160 KB
-Fuse CPU Usage: 1108 ms
+Fuse CPU Usage: 1046 ms

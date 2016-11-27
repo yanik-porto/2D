@@ -68,6 +68,7 @@ ARCHITECTURE behavior OF lowpass_tb IS
 	signal counter : integer:=0;
 	signal counter_end : integer:=0;
 	signal thresh: integer:=0;
+	signal modulo_op : integer:=0;
 	signal blurred : std_logic_vector(7 downto 0);
 	signal flag: STD_LOGIC:= '0';
 	signal flag_endfile: STD_LOGIC:= '0';
@@ -103,7 +104,7 @@ BEGIN
    end process    CLK_i_process;
  
  
-	connection: process(CLK_i, R_i)
+	state_machine: process(CLK_i, R_i)
 	begin
 		if (R_i = '1') then
 			ETATG <= STOP;
@@ -131,7 +132,9 @@ BEGIN
 					ETATG <= STOP;
 			end case;
 		end if;
-	end process connection;
+	end process state_machine;
+
+
 
    -- Reading process
    reading: process(CLK_i, ETATG)
@@ -159,7 +162,17 @@ BEGIN
 				readline (data, sample);
 				read(sample, I1_var);			
 				I1 <= I1_var;
-				dataread <= blurred;
+				if (counter <= 128+thresh) then
+					dataread <= x"00";
+				elsif (counter > 128+thresh and counter <= 16256+thresh) then
+					modulo_op <= (counter-thresh) mod (128);
+					if (((counter-thresh) mod (128) = 0) or ((counter-thresh-1) mod (128) = 0)) then 
+						dataread <= x"00";
+					else	dataread <= blurred;
+					end if;
+				elsif (counter > 16256+thresh) then 
+					dataread <= x"00";
+				end if;
 				counter <= counter + 1;
 			else
 				flag_endfile <= '1';
@@ -169,33 +182,6 @@ BEGIN
 	 when others =>
 	 
 	end case;
-			
---	if (CLK_i'event and CLK_i = '1') then 
---	 
---	 -- file_open (data,"Lena128x128g_8bits.dat", read_mode);
---	 
---	--	wait until CLK_i = '1' and CLK_i'event;
---	--	while not endfile(data) loop
---	if (not endfile(data)) then
---			readline (data, sample);
---			read(sample, I1_var);
---			
---			I1 <= I1_var;
---			
---			if (counter > thresh) then
---				flag <= '1';
---				dataread <= blurred;
---			end if;
---				
---			counter <= counter + 1;
---	else
---		
---		--if (endfile(data)) then
---			flag_endfile <= '1';
---			-- file_close (data);
---	end if;
---	end if ;
-      
    end process reading;
 	
 	
@@ -237,34 +223,7 @@ BEGIN
 		when others =>
 		
 	end case;
---		if (CLK_i'event and CLK_i = '0') then 
---		
---			if(flag_endfile = '0' and flag = '1') then
---				if(flag_write = '0') then 
---					file_open (data2, "blurred_lena.dat", write_mode);
---					flag_write <= '1';
---				end if;
---				write (sample2, dataread, right, 8);
---				writeline (data2, sample2);
---			else 
---				null;
---			end if;
---
---			if(flag_endfile = '1') then 
---				counter_end <= counter_end + 1;
---				if(counter_end > thresh) then
---					flag_write <= '0';
---				end if;
---				
---				if(flag_write = '0') then
---					file_close (data2);
---				end if;
---				
---				write (sample2, dataread, right, 8);
---				writeline (data2, sample2);
---				
---			end if;		
---		end if;
+
 	end process writing;
 	
 	-- Component instantiation
