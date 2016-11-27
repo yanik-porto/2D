@@ -46,8 +46,8 @@ ARCHITECTURE behavior OF lowpass_tb IS
          D_i : IN  std_logic_vector(7 downto 0);
          Q_i : OUT  std_logic_vector(7 downto 0);
          R_i : IN  std_logic;
-         CLK_i : IN  std_logic
-			--start_process : IN std_logic;
+         CLK_i : IN  std_logic;
+			start_process : IN std_logic
         );
     END COMPONENT;
     
@@ -56,7 +56,7 @@ ARCHITECTURE behavior OF lowpass_tb IS
    signal D_i : std_logic_vector(7 downto 0) := (others => '0');
    signal R_i : std_logic := '0';
    signal CLK_i : std_logic := '0';
-	--signal start_process : std_logic := '0';
+	signal start_process : std_logic := '0';
 
  	--Outputs
    signal Q_i : std_logic_vector(7 downto 0);
@@ -84,8 +84,8 @@ BEGIN
           D_i => D_i,
           Q_i => Q_i,
           R_i => R_i,
-          CLK_i => CLK_i
-			 --start_process => start_process
+          CLK_i => CLK_i,
+			 start_process => start_process
         );
 
    -- Clock process definitions
@@ -104,6 +104,8 @@ BEGIN
 	FILE data : text is in "Lena128x128g_8bits.dat";
    variable sample : line;
 	variable I1_var: std_logic_vector (7 downto 0);
+	
+	
 	
    begin		
 	
@@ -176,6 +178,6 @@ BEGIN
 	end process writing;
 	
 	-- Component instantiation
-	lp_filter : lowpass_filter PORT MAP ( D_i => I1, Q_i => blurred , R_i => '0', CLK_i => CLK_i);-- start_process => flag);
+	lp_filter : lowpass_filter PORT MAP ( D_i => I1, Q_i => blurred , R_i => '0', CLK_i => CLK_i, start_process => flag);
 
 END;

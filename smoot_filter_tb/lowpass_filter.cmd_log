@@ -22,3 +22,4 @@ xst -intstyle ise -ifn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubo
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "lowpass_filter.ngc" lowpass_filter.ngd  
 xst -intstyle ise -ifn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.xst" -ofn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.syr" 
 xst -intstyle ise -ifn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.xst" -ofn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.syr" 
+xst -intstyle ise -ifn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.xst" -ofn "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.syr" 

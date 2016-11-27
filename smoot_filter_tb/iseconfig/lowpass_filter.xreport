@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-11-27T11:17:01</DateModified>
+  <DateModified>2016-11-27T12:19:17</DateModified>
   <ModuleName>lowpass_filter</ModuleName>
-  <SummaryTimeStamp>2016-11-27T11:16:12</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-11-27T11:17:24</SummaryTimeStamp>
   <SavedFilePath>C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/iseconfig/lowpass_filter.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb\</ImplementationReportsDirectory>
   <DateInitialized>2016-11-19T16:21:52</DateInitialized>

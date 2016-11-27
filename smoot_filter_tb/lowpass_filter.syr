@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.07 secs
  
 --> Reading design: lowpass_filter.prj
 
@@ -123,7 +123,6 @@ Parsing architecture <lowpass_filter_arch> of entity <lowpass_filter>.
 =========================================================================
 
 Elaborating entity <lowpass_filter> (architecture <lowpass_filter_arch>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smoot_filter_tb\lowpass_filter.vhd" Line 118: Using initial value '1' for flag since it is never assigned
 
 Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
 
@@ -329,11 +328,11 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_13> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <lowpass_filter> ...
-
 Optimizing unit <d_ff_1> ...
 
 Optimizing unit <d_ff_2> ...
+
+Optimizing unit <lowpass_filter> ...
 
 Optimizing unit <lowpass_processing> ...
 WARNING:Xst:1293 - FF/Latch <filter/d_ff_temp1/temp_12> has a constant value of 0 in block <lowpass_filter>. This FF/Latch will be trimmed during the optimization process.
@@ -359,89 +358,24 @@ Found area constraint ratio of 100 (+ 5) on block lowpass_filter, actual ratio i
 Final Macro Processing ...
 
 Processing Unit <lowpass_filter> :
-	Found 2-bit shift register for signal <filter/pxl_8_7>.
-	Found 2-bit shift register for signal <filter/pxl_8_6>.
-	Found 2-bit shift register for signal <filter/pxl_8_5>.
-	Found 2-bit shift register for signal <filter/pxl_8_4>.
-	Found 2-bit shift register for signal <filter/pxl_8_3>.
-	Found 2-bit shift register for signal <filter/pxl_8_2>.
-	Found 2-bit shift register for signal <filter/pxl_8_1>.
-	Found 2-bit shift register for signal <filter/pxl_8_0>.
-	Found 2-bit shift register for signal <filter/pxl_7_7>.
-	Found 2-bit shift register for signal <filter/pxl_7_6>.
-	Found 2-bit shift register for signal <filter/pxl_7_5>.
-	Found 2-bit shift register for signal <filter/pxl_7_4>.
-	Found 2-bit shift register for signal <filter/pxl_7_3>.
-	Found 2-bit shift register for signal <filter/pxl_7_2>.
-	Found 2-bit shift register for signal <filter/pxl_7_1>.
-	Found 2-bit shift register for signal <filter/pxl_7_0>.
-	Found 2-bit shift register for signal <filter/pxl_5_7>.
-	Found 2-bit shift register for signal <filter/pxl_5_6>.
-	Found 2-bit shift register for signal <filter/pxl_5_5>.
-	Found 2-bit shift register for signal <filter/pxl_5_4>.
-	Found 2-bit shift register for signal <filter/pxl_5_3>.
-	Found 2-bit shift register for signal <filter/pxl_5_2>.
-	Found 2-bit shift register for signal <filter/pxl_5_1>.
-	Found 2-bit shift register for signal <filter/pxl_5_0>.
-	Found 2-bit shift register for signal <filter/pxl_4_7>.
-	Found 2-bit shift register for signal <filter/pxl_4_6>.
-	Found 2-bit shift register for signal <filter/pxl_4_5>.
-	Found 2-bit shift register for signal <filter/pxl_4_4>.
-	Found 2-bit shift register for signal <filter/pxl_4_3>.
-	Found 2-bit shift register for signal <filter/pxl_4_2>.
-	Found 2-bit shift register for signal <filter/pxl_4_1>.
-	Found 2-bit shift register for signal <filter/pxl_4_0>.
-	Found 2-bit shift register for signal <filter/pxl_6_7>.
-	Found 2-bit shift register for signal <filter/pxl_6_6>.
-	Found 2-bit shift register for signal <filter/pxl_6_5>.
-	Found 2-bit shift register for signal <filter/pxl_6_4>.
-	Found 2-bit shift register for signal <filter/pxl_6_3>.
-	Found 2-bit shift register for signal <filter/pxl_6_2>.
-	Found 2-bit shift register for signal <filter/pxl_6_1>.
-	Found 2-bit shift register for signal <filter/pxl_6_0>.
-	Found 2-bit shift register for signal <filter/pxl_2_7>.
-	Found 2-bit shift register for signal <filter/pxl_2_6>.
-	Found 2-bit shift register for signal <filter/pxl_2_5>.
-	Found 2-bit shift register for signal <filter/pxl_2_4>.
-	Found 2-bit shift register for signal <filter/pxl_2_3>.
-	Found 2-bit shift register for signal <filter/pxl_2_2>.
-	Found 2-bit shift register for signal <filter/pxl_2_1>.
-	Found 2-bit shift register for signal <filter/pxl_2_0>.
-	Found 2-bit shift register for signal <filter/pxl_1_7>.
-	Found 2-bit shift register for signal <filter/pxl_1_6>.
-	Found 2-bit shift register for signal <filter/pxl_1_5>.
-	Found 2-bit shift register for signal <filter/pxl_1_4>.
-	Found 2-bit shift register for signal <filter/pxl_1_3>.
-	Found 2-bit shift register for signal <filter/pxl_1_2>.
-	Found 2-bit shift register for signal <filter/pxl_1_1>.
-	Found 2-bit shift register for signal <filter/pxl_1_0>.
-	Found 2-bit shift register for signal <filter/pxl_3_7>.
-	Found 2-bit shift register for signal <filter/pxl_3_6>.
-	Found 2-bit shift register for signal <filter/pxl_3_5>.
-	Found 2-bit shift register for signal <filter/pxl_3_4>.
-	Found 2-bit shift register for signal <filter/pxl_3_3>.
-	Found 2-bit shift register for signal <filter/pxl_3_2>.
-	Found 2-bit shift register for signal <filter/pxl_3_1>.
-	Found 2-bit shift register for signal <filter/pxl_3_0>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_7>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_6>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_5>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_4>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_3>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_2>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_1>.
-	Found 5-bit shift register for signal <filter/d_ff_temp3/temp_0>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_7>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_6>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_5>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_4>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_3>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_2>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_1>.
+	Found 4-bit shift register for signal <filter/d_ff_temp3/temp_0>.
 Unit <lowpass_filter> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 155
- Flip-Flops                                            : 155
-# Shift Registers                                      : 72
- 2-bit shift register                                  : 64
- 5-bit shift register                                  : 8
+# Registers                                            : 291
+ Flip-Flops                                            : 291
+# Shift Registers                                      : 8
+ 4-bit shift register                                  : 8
 
 =========================================================================
 
@@ -464,23 +398,25 @@ Top Level Output File Name         : lowpass_filter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 221
+# BELS                             : 222
 #      GND                         : 1
+#      INV                         : 1
 #      LUT1                        : 2
 #      LUT2                        : 68
 #      MUXCY                       : 70
 #      VCC                         : 1
 #      XORCY                       : 79
-# FlipFlops/Latches                : 227
-#      FD                          : 83
+# FlipFlops/Latches                : 299
+#      FD                          : 147
 #      FDC                         : 72
-#      FDE                         : 72
-# Shift Registers                  : 72
-#      SRLC16E                     : 72
+#      FDE                         : 8
+#      FDR                         : 72
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 17
-#      IBUF                        : 9
+# IO Buffers                       : 18
+#      IBUF                        : 10
 #      OBUF                        : 8
 # Others                           : 2
 #      fifo                        : 2
@@ -492,22 +428,22 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             227  out of  126800     0%  
- Number of Slice LUTs:                  142  out of  63400     0%  
-    Number used as Logic:                70  out of  63400     0%  
-    Number used as Memory:               72  out of  19000     0%  
-       Number used as SRL:               72
+ Number of Slice Registers:             299  out of  126800     0%  
+ Number of Slice LUTs:                   79  out of  63400     0%  
+    Number used as Logic:                71  out of  63400     0%  
+    Number used as Memory:                8  out of  19000     0%  
+       Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    237
-   Number with an unused Flip Flop:      10  out of    237     4%  
-   Number with an unused LUT:            95  out of    237    40%  
-   Number of fully used LUT-FF pairs:   132  out of    237    55%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:    310
+   Number with an unused Flip Flop:      11  out of    310     3%  
+   Number with an unused LUT:           231  out of    310    74%  
+   Number of fully used LUT-FF pairs:    68  out of    310    21%  
+   Number of unique control sets:         4
 
 IO Utilization: 
- Number of IOs:                          18
- Number of bonded IOBs:                  18  out of    210     8%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    210     9%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -533,7 +469,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK_i                              | BUFGP                  | 299   |
+CLK_i                              | BUFGP                  | 307   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -545,9 +481,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 1.948ns (Maximum Frequency: 513.268MHz)
-   Minimum input arrival time before clock: 0.742ns
+   Minimum input arrival time before clock: 1.135ns
    Maximum output required time after clock: 0.640ns
-   Maximum combinational path delay: 0.427ns
+   Maximum combinational path delay: 0.428ns
 
 Timing Details:
 ---------------
@@ -556,7 +492,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_i'
   Clock period: 1.948ns (frequency: 513.268MHz)
-  Total number of paths / destination ports: 1353 / 275
+  Total number of paths / destination ports: 1361 / 283
 -------------------------------------------------------------------------
 Delay:               1.948ns (Levels of Logic = 13)
   Source:            filter/adder_7_0 (FF)
@@ -589,22 +525,23 @@ Delay:               1.948ns (Levels of Logic = 13)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_i'
-  Total number of paths / destination ports: 96 / 96
+  Total number of paths / destination ports: 168 / 168
 -------------------------------------------------------------------------
-Offset:              0.742ns (Levels of Logic = 1)
-  Source:            R_i (PAD)
-  Destination:       d_ff_9/temp_7 (FF)
+Offset:              1.135ns (Levels of Logic = 2)
+  Source:            start_process (PAD)
+  Destination:       input_1_0 (FF)
   Destination Clock: CLK_i rising
 
-  Data Path: R_i to d_ff_9/temp_7
+  Data Path: start_process to input_1_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            72   0.001   0.392  R_i_IBUF (R_i_IBUF)
-     FDC:CLR                   0.349          d_ff_9/temp_7
+     IBUF:I->O             1   0.001   0.279  start_process_IBUF (start_process_IBUF)
+     INV:I->O             72   0.113   0.392  start_process_inv1_INV_0 (start_process_inv)
+     FDR:R                     0.349          input_1_0
     ----------------------------------------
-    Total                      0.742ns (0.350ns logic, 0.392ns route)
-                                       (47.2% logic, 52.8% route)
+    Total                      1.135ns (0.463ns logic, 0.672ns route)
+                                       (40.8% logic, 59.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_i'
@@ -629,7 +566,7 @@ Offset:              0.640ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Delay:               0.427ns (Levels of Logic = 1)
+Delay:               0.428ns (Levels of Logic = 1)
   Source:            CLK_i (PAD)
   Destination:       fifo_1:clk (PAD)
 
@@ -637,10 +574,10 @@ Delay:               0.427ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     BUFGP:I->O          299   0.000   0.427  CLK_i_BUFGP (CLK_i_BUFGP)
+     BUFGP:I->O          307   0.000   0.428  CLK_i_BUFGP (CLK_i_BUFGP)
     fifo:clk                   0.000          fifo_1
     ----------------------------------------
-    Total                      0.427ns (0.000ns logic, 0.427ns route)
+    Total                      0.428ns (0.000ns logic, 0.428ns route)
                                        (0.0% logic, 100.0% route)
 
 =========================================================================
@@ -659,14 +596,14 @@ CLK_i          |    1.948|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 18.16 secs
+Total REAL time to Xst completion: 48.00 secs
+Total CPU time to Xst completion: 48.18 secs
  
 --> 
 
-Total memory usage is 413964 kilobytes
+Total memory usage is 445304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  102 (   0 filtered)
+Number of warnings :  101 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

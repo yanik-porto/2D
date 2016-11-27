@@ -27,8 +27,8 @@ Compiling architecture lowpass_processing_arch of entity lowpass_processing [low
 Compiling architecture lowpass_filter_arch of entity lowpass_filter [lowpass_filter_default]
 Compiling architecture behavior of entity lowpass_tb
 Time Resolution for simulation is 1ps.
-Waiting for 11 sub-compilation(s) to finish...
+Waiting for 12 sub-compilation(s) to finish...
 Compiled 24 VHDL Units
 Built simulation executable C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_tb_isim_beh.exe
-Fuse Memory Usage: 42040 KB
-Fuse CPU Usage: 1046 ms
+Fuse Memory Usage: 42196 KB
+Fuse CPU Usage: 1124 ms
