@@ -36,7 +36,9 @@ entity lowpass_filter is
     Port ( D_i : in  STD_LOGIC_VECTOR (7 downto 0);
            Q_i : out  STD_LOGIC_VECTOR (7 downto 0);
 			  R_i : IN  std_logic;
-			  CLK_i : IN  std_logic
+			  CLK_i : IN  std_logic;
+			  start_process : IN std_logic;
+			  result_available : OUT std_logic
 			  );
 end lowpass_filter;
 
@@ -114,7 +116,7 @@ signal input_9: STD_LOGIC_VECTOR (7 downto 0);
 signal output: STD_LOGIC_VECTOR (7 downto 0);
  
 -- flag if all 9 pixels read
-signal flag: STD_LOGIC:= '0';
+-- signal flag: STD_LOGIC:= '0';
 
 -- signals for fifo
 signal rd_en_1: STD_LOGIC;
@@ -131,6 +133,21 @@ signal full_1 : STD_LOGIC;
 signal full_2 : STD_LOGIC;
 signal prog_full_thresh_fifo : STD_LOGIC_VECTOR(6 DOWNTO 0);
 
+--signal temp0_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+--signal temp1_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+--signal temp2_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+--signal temp3_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp0_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp1_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp2_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp3_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp4_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp5_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp6_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp7_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp8_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal temp9_res_av : STD_LOGIC_VECTOR(0 DOWNTO 0);
+
 begin
 
 -- Map ports of the entity to ports of the instantiated components
@@ -138,7 +155,7 @@ d_ff_1 : d_ff generic map (8) PORT MAP (R => R_i, D => D_i, Q => temp1, CLK => C
 d_ff_2 : d_ff generic map (8) PORT MAP (R => R_i, D => temp1, Q => temp2, CLK => CLK_i, E => '1');
 d_ff_3 : d_ff generic map (8) PORT MAP (R => R_i, D => temp2, Q => temp3, CLK => CLK_i, E => '1');  
 
-fifo_1 : fifo PORT MAP (clk => CLK_i, rst => '0', din => temp3, wr_en => '1', rd_en => rd_en_1,
+fifo_1 : fifo PORT MAP (clk => CLK_i, rst => R_i, din => temp3, wr_en => '1', rd_en => rd_en_1,
 								prog_full_thresh => prog_full_thresh_fifo, dout => buffer1, full => full_1,
 								empty => empty_1, prog_full => prog_full_1);
 								
@@ -146,7 +163,7 @@ d_ff_4 : d_ff generic map (8) PORT MAP (R => R_i, D => buffer1, Q => temp4, CLK 
 d_ff_5 : d_ff generic map (8) PORT MAP (R => R_i, D => temp4, Q => temp5, CLK => CLK_i, E => '1');
 d_ff_6 : d_ff generic map (8) PORT MAP (R => R_i, D => temp5, Q => temp6, CLK => CLK_i, E => '1');  
 
-fifo_2 : fifo PORT MAP (clk => CLK_i, rst => '0', din => temp6, wr_en => '1', rd_en => rd_en_2,
+fifo_2 : fifo PORT MAP (clk => CLK_i, rst => R_i, din => temp6, wr_en => '1', rd_en => rd_en_2,
 								prog_full_thresh => prog_full_thresh_fifo, dout => buffer2, full => full_2,
 								empty => empty_2, prog_full => prog_full_2);
 								
@@ -163,16 +180,28 @@ filter : lowpass_processing PORT MAP (CLK => CLK_i, d_ff_1 => input_1, d_ff_2 =>
 prog_full_thresh_fifo <= "1111011";
 rd_en_1 <= prog_full_1;
 rd_en_2 <= prog_full_2;
+-- temp0_res_av(0) <= prog_full_2;
+
+temp0_res_av(0) <= start_process;
+d_ff_temp1_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp0_res_av, Q => temp1_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp2_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp1_res_av, Q => temp2_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp3_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp2_res_av, Q => temp3_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp4_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp3_res_av, Q => temp4_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp5_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp4_res_av, Q => temp5_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp6_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp5_res_av, Q => temp6_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp7_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp6_res_av, Q => temp7_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp8_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp7_res_av, Q => temp8_res_av, CLK => CLK_i, E => '1'); 
+d_ff_temp9_av : d_ff generic map (1) PORT MAP (R => R_i, D => temp8_res_av, Q => temp9_res_av, CLK => CLK_i, E => '1'); 
 
 cache_mem: process(CLK_i)
 
 begin 
 
 	if(CLK_i'event and CLK_i = '1') then
-		if (temp9 /= 0) then flag <= '1';
-		end if;
+--		if (temp9 /= 0) then flag <= '1';
+--		end if;
 		-- Send flip flops output to the lowpass filter processing
-		if (flag = '1') then 
+		if (start_process = '1') then 
 			input_1 <= temp1;
 			input_2 <= temp2;
 			input_3 <= temp3;
@@ -198,6 +227,7 @@ end process cache_mem;
 
 -- Send output of the lowpass_processing to the general output
 Q_i <= output;
+result_available <= temp9_res_av(0);
 
 end lowpass_filter_arch;
 

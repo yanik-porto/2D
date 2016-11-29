@@ -6,52 +6,10 @@ C:\Xilinx\14.7\ISE_DS\ISE\.
 speed -3
 Opened constraints file Imag_Proc_top.pcf.
 
-Thu Nov 24 17:09:14 2016
+Tue Nov 29 16:57:23 2016
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -g UnconstrainedPins:Allow -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:3 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:Disable -g ConfigFallback:Disable -g BPI_page_size:1 -g BPI_sync_mode:Disable -g SPI_32bit_addr:No -g SPI_buswidth:1 -g SPI_Fall_Edge:No -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g Encrypt:No Imag_Proc_top.ncd 
 
-WARNING:Bitgen:343 - This design contains pins which have locations (LOC) that
-   are not user-assigned or I/O Standards (IOSTANDARD) that are not
-   user-assigned.  This may cause I/O contention or incompatibility with the
-   board power or connectivity affecting performance, signal integrity or in
-   extreme cases cause damage to the device or the components to which it is
-   connected.  To prevent this warning, it is highly suggested to specify all
-   pin locations and I/O standards to avoid potential contention or conflicts
-   and allow proper bitstream creation.
-This message applies to the following I/O ports:
-   rst_i
-   LED<9>
-   LED<7>
-   LED<11>
-   LED<13>
-   LED<4>
-   vga_red_o<0>
-   vga_red_o<2>
-   vga_blue_o<0>
-   vga_red_o<3>
-   vga_red_o<1>
-   vga_blue_o<1>
-   vga_blue_o<2>
-   ISEcho
-   vga_vs_o
-   vga_green_o<1>
-   LED<0>
-   LED<1>
-   vga_green_o<0>
-   LED<3>
-   vga_blue_o<3>
-   clk_i
-   vga_green_o<3>
-   LED<6>
-   vga_green_o<2>
-   LED<8>
-   LED<10>
-   vga_hs_o
-   LED<12>
-   LED<2>
-   LED<14>
-   LED<15>
-   LED<5>
 INFO:Bitgen:40 - Replacing "Auto" with "NoWait" for option "Match_cycle".  Most
    commonly, bitgen has determined and will use a specific value instead of the
    generic command-line value of "Auto".  Alternately, this message appears if
@@ -194,172 +152,25 @@ There were 0 CONFIG constraint(s) processed from Imag_Proc_top.pcf.
 
 
 Running DRC.
-WARNING:PhysDesignRules:2452 - The IOB LED<12> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<11> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<14> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<13> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<10> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<15> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_green_o<3> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_green_o<2> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_green_o<1> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_green_o<0> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB clk_i is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_red_o<0> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_red_o<1> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_red_o<2> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_red_o<3> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_vs_o is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB ISEcho is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_blue_o<1> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_blue_o<2> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_blue_o<3> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_blue_o<0> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB rst_i is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB vga_hs_o is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<0> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<1> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<2> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<3> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<4> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<5> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<6> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<7> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<8> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB LED<9> is either not constrained (LOC) to
-   a specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-DRC detected 0 errors and 33 warnings.  Please see the previously displayed
+WARNING:PhysDesignRules:367 - The signal <ISFast_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISVolDown_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISPureFreq_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISMusic_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISFIFO_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISVolUp_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISSiren_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISRealFreq_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <ISSlow_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+DRC detected 0 errors and 9 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "imag_proc_top.bit".

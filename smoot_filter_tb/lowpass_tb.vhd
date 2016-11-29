@@ -81,7 +81,7 @@ ARCHITECTURE behavior OF lowpass_tb IS
 	
 BEGIN
 
-	thresh <= 9;
+	thresh <= 128+9;
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: lowpass_filter PORT MAP (
@@ -178,6 +178,15 @@ BEGIN
 				flag_endfile <= '1';
 			end if;
 		end if;
+		
+		when END_READ => 
+			if (CLK_i'event and CLK_i = '1') then 
+				if(counter < 16256 + thresh - 2) then -- -2 for the last borders
+					dataread <= blurred;
+				else dataread <= x"00";
+				end if;
+				counter <= counter + 1;
+			end if;
 	
 	 when others =>
 	 

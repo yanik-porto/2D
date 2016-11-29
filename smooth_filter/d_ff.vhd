@@ -29,6 +29,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+-- Description of Flip Flop
 entity d_ff is
 generic (BUS_WIDTH: integer := 8);
     Port ( R : in  STD_LOGIC;

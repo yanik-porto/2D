@@ -86,10 +86,14 @@ signal pxl_9_temp1 : STD_LOGIC_VECTOR (12 downto 0);
 signal pxl_9_temp2 : STD_LOGIC_VECTOR (12 downto 0);
 signal pxl_9_temp3 : STD_LOGIC_VECTOR (12 downto 0);
 
+signal conversion : STD_LOGIC_VECTOR (12 downto 0);
+
 begin
 
+conversion <= conv_std_logic_vector(pxl_9, pxl_9'length);
+
 -- map 9th pixel to first ff and pass it to the other ones
-d_ff_temp1 : d_ff generic map (13) PORT MAP (R => '0', D => conv_std_logic_vector(pxl_9, pxl_9'length), Q => pxl_9_temp1, CLK => CLK, E => '1');
+d_ff_temp1 : d_ff generic map (13) PORT MAP (R => '0', D => conversion, Q => pxl_9_temp1, CLK => CLK, E => '1');
 d_ff_temp2 : d_ff generic map (13) PORT MAP (R => '0', D => pxl_9_temp1, Q => pxl_9_temp2, CLK => CLK, E => '1');
 d_ff_temp3 : d_ff generic map (13) PORT MAP (R => '0', D => pxl_9_temp2, Q => pxl_9_temp3, CLK => CLK, E => '1');
 

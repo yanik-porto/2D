@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: Imag_Proc_top.prj
 
@@ -117,7 +117,6 @@ Parsing architecture <d_ff_arch> of entity <d_ff>.
 Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" into library work
 Parsing entity <lowpass_processing>.
 Parsing architecture <lowpass_processing_arch> of entity <lowpass_processing>.
-WARNING:HDLCompiler:946 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" Line 92: Actual for formal port d is neither a static name nor a globally static expression
 Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" into library work
 Parsing entity <lowpass_filter>.
 Parsing architecture <lowpass_filter_arch> of entity <lowpass_filter>.
@@ -138,6 +137,8 @@ Elaborating entity <DataFlow_Display> (architecture <DataFlow_Display_arch>) fro
 WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\DataFlow_Display.vhd" Line 59: <fifo_imag_9b_16700> remains a black-box since it has no binding entity.
 WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\DataFlow_Display.vhd" Line 75: <vga_df> remains a black-box since it has no binding entity.
 WARNING:HDLCompiler:89 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" Line 66: <imgrom_pixgl8b> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:439 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" Line 103: Formal port result_available of mode out cannot be associated with actual port result_available of mode in
+INFO:HDLCompiler:1408 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" Line 41. result_available is declared here
 
 Elaborating entity <lowpass_filter> (architecture <lowpass_filter_arch>) from library <work>.
 
@@ -149,7 +150,10 @@ Elaborating entity <lowpass_processing> (architecture <lowpass_processing_arch>)
 WARNING:HDLCompiler:871 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" Line 82: Using initial value "0001" for mask since it is never assigned
 
 Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
-WARNING:HDLCompiler:634 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" Line 113: Net <Switch_start> does not have a driver.
+
+Elaborating entity <d_ff> (architecture <d_ff_arch>) with generics from library <work>.
+INFO:HDLCompiler:1408 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" Line 41. result_available is declared here
+WARNING:HDLCompiler:634 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\Imag_proc_top.vhd" Line 115: Net <Switch_start> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -173,7 +177,6 @@ WARNING:Xst:653 - Signal <Switch_start> is used but never assigned. This sourcel
     Found 1-bit register for signal <LED<5>>.
     Found 1-bit register for signal <LED<4>>.
     Found 1-bit register for signal <wr_en_fifo_orig>.
-    Found 1-bit register for signal <wr_en_fifo_proc>.
     Found 1-bit register for signal <data_fifo_orig_ready>.
     Found 1-bit register for signal <data_fifo_proc_ready>.
 INFO:Xst:1799 - State s4 is never reached in FSM <STATEG>.
@@ -183,7 +186,7 @@ INFO:Xst:1799 - State s5 is never reached in FSM <STATEG>.
     | States             | 5                                              |
     | Transitions        | 6                                              |
     | Inputs             | 3                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 6                                              |
     | Clock              | clk_int (rising_edge)                          |
     | Reset              | rst_i (positive)                               |
     | Reset type         | asynchronous                                   |
@@ -192,11 +195,11 @@ INFO:Xst:1799 - State s5 is never reached in FSM <STATEG>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 14-bit adder for signal <addra[13]_GND_6_o_add_2_OUT> created at line 208.
+    Found 14-bit adder for signal <addra[13]_GND_6_o_add_2_OUT> created at line 212.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  21 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <Imag_Proc_top> synthesized.
 
@@ -209,11 +212,10 @@ Unit <DataFlow_Display> synthesized.
 
 Synthesizing Unit <lowpass_filter>.
     Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd".
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 141: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 141: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 149: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 149: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
-    Found 8-bit register for signal <input_1>.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 158: Output port <full> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 158: Output port <empty> of the instance <fifo_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 166: Output port <full> of the instance <fifo_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_filter.vhd" line 166: Output port <empty> of the instance <fifo_2> is unconnected or connected to loadless signal.
     Found 8-bit register for signal <input_2>.
     Found 8-bit register for signal <input_3>.
     Found 8-bit register for signal <input_4>.
@@ -222,9 +224,9 @@ INFO:Xst:3210 - "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRe
     Found 8-bit register for signal <input_7>.
     Found 8-bit register for signal <input_8>.
     Found 8-bit register for signal <input_9>.
-    Found 1-bit register for signal <flag>.
+    Found 8-bit register for signal <input_1>.
     Summary:
-	inferred  73 D-type flip-flop(s).
+	inferred  72 D-type flip-flop(s).
 Unit <lowpass_filter> synthesized.
 
 Synthesizing Unit <d_ff_1>.
@@ -255,15 +257,15 @@ Synthesizing Unit <lowpass_processing>.
     Found 8-bit register for signal <pxl_8>.
     Found 8-bit register for signal <pxl_9>.
     Found 8-bit register for signal <pxl_1>.
-    Found 16-bit adder for signal <pxl_1[12]_pxl_2[12]_add_0_OUT> created at line 113.
-    Found 16-bit adder for signal <pxl_3[12]_pxl_4[12]_add_1_OUT> created at line 114.
-    Found 16-bit adder for signal <pxl_5[12]_pxl_6[12]_add_2_OUT> created at line 115.
-    Found 16-bit adder for signal <pxl_7[12]_pxl_8[12]_add_3_OUT> created at line 116.
-    Found 16-bit adder for signal <adder_1[15]_adder_2[15]_add_4_OUT> created at line 119.
-    Found 16-bit adder for signal <adder_3[15]_adder_4[15]_add_5_OUT> created at line 120.
-    Found 16-bit adder for signal <adder_5[15]_adder_6[15]_add_6_OUT> created at line 123.
-    Found 16-bit adder for signal <adder_7[15]_pxl_9_temp3[12]_add_7_OUT> created at line 126.
-    Found 16-bit adder for signal <GND_33_o_GND_33_o_add_8_OUT> created at line 126.
+    Found 16-bit adder for signal <pxl_1[12]_pxl_2[12]_add_1_OUT> created at line 117.
+    Found 16-bit adder for signal <pxl_3[12]_pxl_4[12]_add_2_OUT> created at line 118.
+    Found 16-bit adder for signal <pxl_5[12]_pxl_6[12]_add_3_OUT> created at line 119.
+    Found 16-bit adder for signal <pxl_7[12]_pxl_8[12]_add_4_OUT> created at line 120.
+    Found 16-bit adder for signal <adder_1[15]_adder_2[15]_add_5_OUT> created at line 123.
+    Found 16-bit adder for signal <adder_3[15]_adder_4[15]_add_6_OUT> created at line 124.
+    Found 16-bit adder for signal <adder_5[15]_adder_6[15]_add_7_OUT> created at line 127.
+    Found 16-bit adder for signal <adder_7[15]_pxl_9_temp3[12]_add_8_OUT> created at line 130.
+    Found 16-bit adder for signal <GND_31_o_GND_31_o_add_9_OUT> created at line 130.
     WARNING:Xst:2404 -  FFs/Latches <pxl_2<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
     WARNING:Xst:2404 -  FFs/Latches <pxl_3<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
     WARNING:Xst:2404 -  FFs/Latches <pxl_4<12:8>> (without init value) have a constant value of 0 in block <lowpass_processing>.
@@ -286,6 +288,14 @@ Synthesizing Unit <d_ff_2>.
 	inferred  13 D-type flip-flop(s).
 Unit <d_ff_2> synthesized.
 
+Synthesizing Unit <d_ff_3>.
+    Related source file is "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\d_ff.vhd".
+        BUS_WIDTH = 1
+    Found 1-bit register for signal <temp>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <d_ff_3> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -293,14 +303,14 @@ Macro Statistics
 # Adders/Subtractors                                   : 10
  14-bit adder                                          : 1
  16-bit adder                                          : 9
-# Registers                                            : 48
- 1-bit register                                        : 8
+# Registers                                            : 55
+ 1-bit register                                        : 15
  13-bit register                                       : 3
  14-bit register                                       : 1
  16-bit register                                       : 8
  8-bit register                                        : 28
-# Multiplexers                                         : 2
- 1-bit 2-to-1 multiplexer                              : 1
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 2
  14-bit 2-to-1 multiplexer                             : 1
 # FSMs                                                 : 1
 # Xors                                                 : 15
@@ -368,8 +378,10 @@ Macro Statistics
  16-bit adder                                          : 9
 # Counters                                             : 1
  14-bit up counter                                     : 1
-# Registers                                            : 391
- Flip-Flops                                            : 391
+# Registers                                            : 398
+ Flip-Flops                                            : 398
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
 # Xors                                                 : 15
  1-bit xor2                                            : 15
@@ -435,8 +447,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_12> (withou
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_13> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_14> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <adder_7_15> (without init value) has a constant value of 0 in block <lowpass_processing>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <wr_en_fifo_orig> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <wr_en_fifo_proc> 
-INFO:Xst:2261 - The FF/Latch <data_fifo_proc_ready> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <data_fifo_orig_ready> 
+INFO:Xst:2261 - The FF/Latch <data_fifo_orig_ready> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <data_fifo_proc_ready> 
 
 Optimizing unit <d_ff_1> ...
 
@@ -462,8 +473,9 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_10> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_9> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <smooth/filter/d_ff_temp3/temp_8> has a constant value of 0 in block <Imag_Proc_top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <LED_5> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <data_fifo_proc_ready> 
+INFO:Xst:2261 - The FF/Latch <LED_5> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <data_fifo_orig_ready> 
 INFO:Xst:2261 - The FF/Latch <STATEG_FSM_FFd2> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <ena> 
+INFO:Xst:2261 - The FF/Latch <wr_en_fifo_orig> in Unit <Imag_Proc_top> is equivalent to the following FF/Latch, which will be removed : <smooth/d_ff_temp1_av/temp_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -516,14 +528,15 @@ Processing Unit <Imag_Proc_top> :
 	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_2>.
 	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_1>.
 	Found 4-bit shift register for signal <smooth/filter/d_ff_temp3/temp_0>.
+INFO:Xst:741 - HDL ADVISOR - A 8-bit shift register was found for signal <smooth/d_ff_temp9_av/temp_0> and currently occupies 8 logic cells (4 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <Imag_Proc_top> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 295
- Flip-Flops                                            : 295
+# Registers                                            : 302
+ Flip-Flops                                            : 302
 # Shift Registers                                      : 16
  2-bit shift register                                  : 8
  4-bit shift register                                  : 8
@@ -549,22 +562,22 @@ Top Level Output File Name         : Imag_Proc_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1503
+# BELS                             : 1500
 #      GND                         : 12
 #      INV                         : 16
 #      LUT1                        : 127
-#      LUT2                        : 232
-#      LUT3                        : 37
+#      LUT2                        : 231
+#      LUT3                        : 36
 #      LUT4                        : 174
 #      LUT5                        : 67
-#      LUT6                        : 235
+#      LUT6                        : 234
 #      MUXCY                       : 322
 #      MUXF7                       : 21
 #      VCC                         : 8
 #      XORCY                       : 252
-# FlipFlops/Latches                : 1045
-#      FD                          : 196
-#      FDC                         : 368
+# FlipFlops/Latches                : 1052
+#      FD                          : 195
+#      FDC                         : 376
 #      FDCE                        : 243
 #      FDE                         : 37
 #      FDP                         : 58
@@ -592,17 +605,17 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1045  out of  126800     0%  
- Number of Slice LUTs:                  916  out of  63400     1%  
-    Number used as Logic:               888  out of  63400     1%  
+ Number of Slice Registers:            1052  out of  126800     0%  
+ Number of Slice LUTs:                  913  out of  63400     1%  
+    Number used as Logic:               885  out of  63400     1%  
     Number used as Memory:               28  out of  19000     0%  
        Number used as SRL:               28
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1513
-   Number with an unused Flip Flop:     468  out of   1513    30%  
-   Number with an unused LUT:           597  out of   1513    39%  
-   Number of fully used LUT-FF pairs:   448  out of   1513    29%  
+ Number of LUT Flip Flop pairs used:   1518
+   Number with an unused Flip Flop:     466  out of   1518    30%  
+   Number with an unused LUT:           605  out of   1518    39%  
+   Number of fully used LUT-FF pairs:   447  out of   1518    29%  
    Number of unique control sets:        60
 
 IO Utilization: 
@@ -635,7 +648,7 @@ Clock Information:
 -----------------------------------------------------+--------------------------------------------------------------------------------------+-------+
 Clock Signal                                         | Clock buffer(FF name)                                                                | Load  |
 -----------------------------------------------------+--------------------------------------------------------------------------------------+-------+
-clk_i                                                | IBUFG+BUFG                                                                           | 755   |
+clk_i                                                | IBUFG+BUFG                                                                           | 762   |
 Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0| BUFG                                                                                 | 401   |
 Inst_DataFlow_Display/Inst_VGA/N1                    | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary191)| 40    |
 -----------------------------------------------------+--------------------------------------------------------------------------------------+-------+
@@ -646,12 +659,12 @@ Asynchronous Control Signals Information:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                                                                                        | Buffer(FF name)                                                                                                                                                                                                             | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Inst_DataFlow_Display/Inst_VGA/N0(Inst_DataFlow_Display/Inst_VGA/XST_VCC:P)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary111)                                                                                                                                       | 4960  |
-Inst_DataFlow_Display/Inst_VGA/N1(Inst_DataFlow_Display/Inst_VGA/XST_GND:G)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary111)                                                                                                                                       | 2880  |
-Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
-Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
-img_lena_8bits/N1(img_lena_8bits/XST_GND:G)                                                                                                                                                                                                                                                                                                           | NONE(img_lena_8bits/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                                                        | 8     |
-Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/N1(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/XST_GND:G)                                                                                                                                                                                                                                     | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                     | 6     |
+Inst_DataFlow_Display/Inst_VGA/N0(Inst_DataFlow_Display/Inst_VGA/XST_VCC:P)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary12)                                                                                                                                        | 4960  |
+Inst_DataFlow_Display/Inst_VGA/N1(Inst_DataFlow_Display/Inst_VGA/XST_GND:G)                                                                                                                                                                                                                                                                           | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary12)                                                                                                                                        | 2880  |
+Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
+Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 32    |
+img_lena_8bits/N1(img_lena_8bits/XST_GND:G)                                                                                                                                                                                                                                                                                                           | NONE(img_lena_8bits/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                                                        | 8     |
+Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/N1(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/XST_GND:G)                                                                                                                                                                                                                                     | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_mp/logo_annee/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)                                     | 6     |
 Inst_DataFlow_Display/Inst_VGA/N100(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary161:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary16)                                                                                                                                        | 2     |
 Inst_DataFlow_Display/Inst_VGA/N102(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary201:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary20)                                                                                                                                        | 2     |
 Inst_DataFlow_Display/Inst_VGA/N104(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary181:CASCADEOUTA)                                                                                                                                                                                                                      | NONE(Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary18)                                                                                                                                        | 2     |
@@ -679,9 +692,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.596ns (Maximum Frequency: 278.064MHz)
-   Minimum input arrival time before clock: 0.747ns
+   Minimum input arrival time before clock: 0.750ns
    Maximum output required time after clock: 0.654ns
-   Maximum combinational path delay: 0.398ns
+   Maximum combinational path delay: 0.401ns
 
 Timing Details:
 ---------------
@@ -690,7 +703,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_i'
   Clock period: 2.632ns (frequency: 379.997MHz)
-  Total number of paths / destination ports: 5297 / 1440
+  Total number of paths / destination ports: 5296 / 1447
 -------------------------------------------------------------------------
 Delay:               2.632ns (Levels of Logic = 16)
   Source:            addra_0 (FF)
@@ -753,9 +766,9 @@ Delay:               3.596ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
-  Total number of paths / destination ports: 102 / 102
+  Total number of paths / destination ports: 122 / 122
 -------------------------------------------------------------------------
-Offset:              0.747ns (Levels of Logic = 1)
+Offset:              0.750ns (Levels of Logic = 1)
   Source:            rst_i (PAD)
   Destination:       LED_4 (FF)
   Destination Clock: clk_i rising
@@ -764,17 +777,17 @@ Offset:              0.747ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           104   0.001   0.397  rst_i_IBUF (LED_3_OBUF)
+     IBUF:I->O           124   0.001   0.400  rst_i_IBUF (LED_3_OBUF)
      FDCE:CLR                  0.349          LED_4
     ----------------------------------------
-    Total                      0.747ns (0.350ns logic, 0.397ns route)
-                                       (46.8% logic, 53.2% route)
+    Total                      0.750ns (0.350ns logic, 0.400ns route)
+                                       (46.7% logic, 53.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              0.747ns (Levels of Logic = 2)
+Offset:              0.750ns (Levels of Logic = 2)
   Source:            rst_i (PAD)
   Destination:       Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg (FF)
   Destination Clock: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/clkout0 rising
@@ -783,12 +796,12 @@ Offset:              0.747ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           104   0.001   0.397  rst_i_IBUF (LED_3_OBUF)
+     IBUF:I->O           124   0.001   0.400  rst_i_IBUF (LED_3_OBUF)
      begin scope: 'Inst_DataFlow_Display/fifo_proc:rst'
      FDP:PRE                   0.349          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg
     ----------------------------------------
-    Total                      0.747ns (0.350ns logic, 0.397ns route)
-                                       (46.8% logic, 53.2% route)
+    Total                      0.750ns (0.350ns logic, 0.400ns route)
+                                       (46.7% logic, 53.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
@@ -833,7 +846,7 @@ Offset:              0.645ns (Levels of Logic = 2)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               0.398ns (Levels of Logic = 2)
+Delay:               0.401ns (Levels of Logic = 2)
   Source:            rst_i (PAD)
   Destination:       LED<3> (PAD)
 
@@ -841,11 +854,11 @@ Delay:               0.398ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           104   0.001   0.397  rst_i_IBUF (LED_3_OBUF)
+     IBUF:I->O           124   0.001   0.400  rst_i_IBUF (LED_3_OBUF)
      OBUF:I->O                 0.000          LED_3_OBUF (LED<3>)
     ----------------------------------------
-    Total                      0.398ns (0.001ns logic, 0.397ns route)
-                                       (0.3% logic, 99.7% route)
+    Total                      0.401ns (0.001ns logic, 0.400ns route)
+                                       (0.2% logic, 99.8% route)
 
 =========================================================================
 
@@ -874,14 +887,14 @@ clk_i                                                |    2.632|         |      
 =========================================================================
 
 
-Total REAL time to Xst completion: 51.00 secs
-Total CPU time to Xst completion: 50.88 secs
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 42.57 secs
  
 --> 
 
-Total memory usage is 480456 kilobytes
+Total memory usage is 480436 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  117 (   0 filtered)
-Number of infos    :   39 (   0 filtered)
+Number of infos    :   40 (   0 filtered)
 

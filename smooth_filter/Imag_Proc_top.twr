@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
 -n 3 -fastpaths -xml Imag_Proc_top.twx Imag_Proc_top.ncd -o Imag_Proc_top.twr
-Imag_Proc_top.pcf
+Imag_Proc_top.pcf -ucf Imag_proc.ucf
 
 Design file:              Imag_Proc_top.ncd
 Physical constraint file: Imag_Proc_top.pcf
@@ -16,7 +16,6 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
-INFO:Timing:2698 - No timing constraints found, doing default enumeration.
 INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
@@ -26,71 +25,800 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    and for more information on accounting for different loading conditions, 
    please see the device datasheet.
 
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5123 paths analyzed, 2981 endpoints analyzed, 31 failing endpoints
+ 31 timing errors detected. (31 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  35.067ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7 (SLICE_X59Y9.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.930ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7 (FF)
+  Requirement:          0.371ns
+  Data Path Delay:      1.024ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.107ns (1.255 - 1.362)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 129.629ns
+  Destination Clock:    clk_int_BUFG rising at 130.000ns
+  Clock Uncertainty:    0.170ns
+
+  Clock Uncertainty:          0.170ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.097ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X63Y15.AMUX    Tshcko                0.431   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/D<13>
+                                                       Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7
+    SLICE_X59Y9.CX       net (fanout=1)        0.559   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/D<7>
+    SLICE_X59Y9.CLK      Tdick                 0.034   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg<7>
+                                                       Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.024ns (0.465ns logic, 0.559ns route)
+                                                       (45.4% logic, 54.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point STATEG_FSM_FFd1 (SLICE_X75Y57.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.902ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i (FF)
+  Destination:          STATEG_FSM_FFd1 (FF)
+  Requirement:          0.371ns
+  Data Path Delay:      1.066ns (Levels of Logic = 1)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.037ns (1.211 - 1.248)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 129.629ns
+  Destination Clock:    clk_int_BUFG rising at 130.000ns
+  Clock Uncertainty:    0.170ns
+
+  Clock Uncertainty:          0.170ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.097ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i to STATEG_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y62.BQ      Tcko                  0.393   LED_0_OBUF
+                                                       Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i
+    SLICE_X75Y57.A5      net (fanout=2)        0.632   LED_0_OBUF
+    SLICE_X75Y57.CLK     Tas                   0.041   STATEG_FSM_FFd2
+                                                       STATEG_FSM_FFd1-In1
+                                                       STATEG_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.066ns (0.434ns logic, 0.632ns route)
+                                                       (40.7% logic, 59.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7 (SLICE_X78Y38.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.852ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7 (FF)
+  Requirement:          0.371ns
+  Data Path Delay:      1.035ns (Levels of Logic = 0)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.018ns (1.297 - 1.315)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 129.629ns
+  Destination Clock:    clk_int_BUFG rising at 130.000ns
+  Clock Uncertainty:    0.170ns
+
+  Clock Uncertainty:          0.170ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.097ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7 to Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X76Y50.AMUX    Tshcko                0.463   Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/D<13>
+                                                       Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7
+    SLICE_X78Y38.CX      net (fanout=1)        0.565   Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/D<7>
+    SLICE_X78Y38.CLK     Tdick                 0.007   Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg<7>
+                                                       Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.035ns (0.470ns logic, 0.565ns route)
+                                                       (45.4% logic, 54.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point smooth/filter/pxl_3_5 (SLICE_X51Y71.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.002ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               smooth/input_3_5 (FF)
+  Destination:          smooth/filter/pxl_3_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.266ns (Levels of Logic = 0)
+  Clock Path Skew:      0.264ns (0.766 - 0.502)
+  Source Clock:         clk_int_BUFG rising at 10.000ns
+  Destination Clock:    clk_int_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: smooth/input_3_5 to smooth/filter/pxl_3_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y71.BQ      Tcko                  0.141   smooth/input_3<7>
+                                                       smooth/input_3_5
+    SLICE_X51Y71.BX      net (fanout=1)        0.191   smooth/input_3<5>
+    SLICE_X51Y71.CLK     Tckdi       (-Th)     0.066   smooth/filter/pxl_3<7>
+                                                       smooth/filter/pxl_3_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.266ns (0.075ns logic, 0.191ns route)
+                                                       (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_3 (SLICE_X52Y79.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.011ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d1_3 (FF)
+  Destination:          smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.272ns (Levels of Logic = 0)
+  Clock Path Skew:      0.261ns (0.766 - 0.505)
+  Source Clock:         clk_int_BUFG rising at 10.000ns
+  Destination Clock:    clk_int_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d1_3 to smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y79.CQ      Tcko                  0.141   smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d1<4>
+                                                       smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d1_3
+    SLICE_X52Y79.DX      net (fanout=4)        0.203   smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d1<3>
+    SLICE_X52Y79.CLK     Tckdi       (-Th)     0.072   smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2<3>
+                                                       smooth/fifo_1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.272ns (0.069ns logic, 0.203ns route)
+                                                       (25.4% logic, 74.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_12 (SLICE_X81Y47.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.017ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_13 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.346ns (Levels of Logic = 1)
+  Clock Path Skew:      0.329ns (0.875 - 0.546)
+  Source Clock:         clk_int_BUFG rising at 10.000ns
+  Destination Clock:    clk_int_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_13 to Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X77Y50.DQ      Tcko                  0.141   Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg<13>
+                                                       Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_13
+    SLICE_X81Y47.C5      net (fanout=10)       0.261   Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg<13>
+    SLICE_X81Y47.CLK     Tah         (-Th)     0.056   Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin<14>
+                                                       Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_asreg_last[14]_reduce_xor_23_o1
+                                                       Inst_DataFlow_Display/fifo_orig/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_12
+    -------------------------------------------------  ---------------------------
+    Total                                      0.346ns (0.085ns logic, 0.261ns route)
+                                                       (24.6% logic, 75.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/mmcm_adv_inst/CLKIN1
+  Logical resource: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/mmcm_adv_inst/CLKIN1
+  Location pin: MMCME2_ADV_X0Y0.CLKIN1
+  Clock network: clk_int_BUFG
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/mmcm_adv_inst/CLKIN1
+  Logical resource: Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/mmcm_adv_inst/CLKIN1
+  Location pin: MMCME2_ADV_X0Y0.CLKIN1
+  Clock network: clk_int_BUFG
+--------------------------------------------------------------------------------
+Slack: 7.766ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.234ns (447.628MHz) (Trper_CLKA)
+  Physical resource: smooth/fifo_2/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM18.ram/CLKARDCLK
+  Logical resource: smooth/fifo_2/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.WIDE_PRIM18.ram/CLKARDCLK
+  Location pin: RAMB18_X0Y22.RDCLK
+  Clock network: clk_int_BUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_Inst_DataFlow_Display_Inst_VGA_Inst_PxlClkGen_clkout0 = 
+PERIOD TIMEGRP         "Inst_DataFlow_Display_Inst_VGA_Inst_PxlClkGen_clkout0" 
+TS_sys_clk_pin         * 1.08 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 21084 paths analyzed, 2905 endpoints analyzed, 130 failing endpoints
+ 130 timing errors detected. (130 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  94.066ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAMB36_X2Y3.ENBWRENL), 46 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.389ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               LED_5 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          0.370ns
+  Data Path Delay:      3.668ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.079ns (1.329 - 1.250)
+  Source Clock:         clk_int_BUFG rising at 120.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 120.370ns
+  Clock Uncertainty:    0.170ns
+
+  Clock Uncertainty:          0.170ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.097ns
+
+  Maximum Data Path at Slow Process Corner: LED_5 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X67Y51.AMUX      Tshcko                0.431   wr_en_fifo_orig
+                                                         LED_5
+    SLICE_X67Y44.D6        net (fanout=4)        0.490   LED_5
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.DMUX      Tilo                  0.252   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<0>11
+    RAMB36_X2Y3.ENBWRENL   net (fanout=2)        0.350   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<0>
+    RAMB36_X2Y3.CLKBWRCLKL Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        3.668ns (1.383ns logic, 2.285ns route)
+                                                         (37.7% logic, 62.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.798ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          9.259ns
+  Data Path Delay:      7.474ns (Levels of Logic = 5)
+  Clock Path Skew:      0.085ns (1.219 - 1.134)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 0.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X49Y98.AQ        Tcko                  0.341   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+                                                         Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0
+    SLICE_X52Y106.A2       net (fanout=5)        1.088   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<0>
+    SLICE_X52Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o111
+    SLICE_X55Y106.B2       net (fanout=2)        0.590   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X55Y106.B        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X67Y44.D3        net (fanout=2)        2.514   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.DMUX      Tilo                  0.252   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<0>11
+    RAMB36_X2Y3.ENBWRENL   net (fanout=2)        0.350   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<0>
+    RAMB36_X2Y3.CLKBWRCLKL Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        7.474ns (1.487ns logic, 5.987ns route)
+                                                         (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.919ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          9.259ns
+  Data Path Delay:      7.353ns (Levels of Logic = 6)
+  Clock Path Skew:      0.085ns (1.219 - 1.134)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 0.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X49Y98.DQ        Tcko                  0.341   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+                                                         Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3
+    SLICE_X54Y106.A1       net (fanout=11)       0.921   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+    SLICE_X54Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/N6
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o1_SW0
+    SLICE_X55Y106.A3       net (fanout=1)        0.345   Inst_DataFlow_Display/Inst_VGA/N6
+    SLICE_X55Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o1
+    SLICE_X55Y106.B5       net (fanout=10)       0.194   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o
+    SLICE_X55Y106.B        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X67Y44.D3        net (fanout=2)        2.514   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.DMUX      Tilo                  0.252   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<0>11
+    RAMB36_X2Y3.ENBWRENL   net (fanout=2)        0.350   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<0>
+    RAMB36_X2Y3.CLKBWRCLKL Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        7.353ns (1.584ns logic, 5.769ns route)
+                                                         (21.5% logic, 78.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAMB36_X2Y3.ENBWRENU), 46 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.389ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               LED_5 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          0.370ns
+  Data Path Delay:      3.668ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.079ns (1.329 - 1.250)
+  Source Clock:         clk_int_BUFG rising at 120.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 120.370ns
+  Clock Uncertainty:    0.170ns
+
+  Clock Uncertainty:          0.170ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.097ns
+
+  Maximum Data Path at Slow Process Corner: LED_5 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X67Y51.AMUX      Tshcko                0.431   wr_en_fifo_orig
+                                                         LED_5
+    SLICE_X67Y44.D6        net (fanout=4)        0.490   LED_5
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.DMUX      Tilo                  0.252   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<0>11
+    RAMB36_X2Y3.ENBWRENU   net (fanout=2)        0.350   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<0>
+    RAMB36_X2Y3.CLKBWRCLKU Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        3.668ns (1.383ns logic, 2.285ns route)
+                                                         (37.7% logic, 62.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.798ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          9.259ns
+  Data Path Delay:      7.474ns (Levels of Logic = 5)
+  Clock Path Skew:      0.085ns (1.219 - 1.134)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 0.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X49Y98.AQ        Tcko                  0.341   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+                                                         Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0
+    SLICE_X52Y106.A2       net (fanout=5)        1.088   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<0>
+    SLICE_X52Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o111
+    SLICE_X55Y106.B2       net (fanout=2)        0.590   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X55Y106.B        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X67Y44.D3        net (fanout=2)        2.514   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.DMUX      Tilo                  0.252   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<0>11
+    RAMB36_X2Y3.ENBWRENU   net (fanout=2)        0.350   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<0>
+    RAMB36_X2Y3.CLKBWRCLKU Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        7.474ns (1.487ns logic, 5.987ns route)
+                                                         (19.9% logic, 80.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.919ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          9.259ns
+  Data Path Delay:      7.353ns (Levels of Logic = 6)
+  Clock Path Skew:      0.085ns (1.219 - 1.134)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 0.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X49Y98.DQ        Tcko                  0.341   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+                                                         Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3
+    SLICE_X54Y106.A1       net (fanout=11)       0.921   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+    SLICE_X54Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/N6
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o1_SW0
+    SLICE_X55Y106.A3       net (fanout=1)        0.345   Inst_DataFlow_Display/Inst_VGA/N6
+    SLICE_X55Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o1
+    SLICE_X55Y106.B5       net (fanout=10)       0.194   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o
+    SLICE_X55Y106.B        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X67Y44.D3        net (fanout=2)        2.514   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.DMUX      Tilo                  0.252   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<0>11
+    RAMB36_X2Y3.ENBWRENU   net (fanout=2)        0.350   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<0>
+    RAMB36_X2Y3.CLKBWRCLKU Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        7.353ns (1.584ns logic, 5.769ns route)
+                                                         (21.5% logic, 78.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAMB36_X2Y4.ENBWRENL), 46 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.254ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               LED_5 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          0.370ns
+  Data Path Delay:      3.527ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.073ns (1.323 - 1.250)
+  Source Clock:         clk_int_BUFG rising at 120.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 120.370ns
+  Clock Uncertainty:    0.170ns
+
+  Clock Uncertainty:          0.170ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.097ns
+
+  Maximum Data Path at Slow Process Corner: LED_5 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X67Y51.AMUX      Tshcko                0.431   wr_en_fifo_orig
+                                                         LED_5
+    SLICE_X67Y44.D6        net (fanout=4)        0.490   LED_5
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.D         Tilo                  0.097   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<1>11
+    RAMB36_X2Y4.ENBWRENL   net (fanout=2)        0.364   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<1>
+    RAMB36_X2Y4.CLKBWRCLKL Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        3.527ns (1.228ns logic, 2.299ns route)
+                                                         (34.8% logic, 65.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.933ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          9.259ns
+  Data Path Delay:      7.333ns (Levels of Logic = 5)
+  Clock Path Skew:      0.079ns (1.213 - 1.134)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 0.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X49Y98.AQ        Tcko                  0.341   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+                                                         Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_0
+    SLICE_X52Y106.A2       net (fanout=5)        1.088   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<0>
+    SLICE_X52Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o111
+    SLICE_X55Y106.B2       net (fanout=2)        0.590   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X55Y106.B        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X67Y44.D3        net (fanout=2)        2.514   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.D         Tilo                  0.097   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<1>11
+    RAMB36_X2Y4.ENBWRENL   net (fanout=2)        0.364   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<1>
+    RAMB36_X2Y4.CLKBWRCLKL Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        7.333ns (1.332ns logic, 6.001ns route)
+                                                         (18.2% logic, 81.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.054ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3 (FF)
+  Destination:          Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          9.259ns
+  Data Path Delay:      7.212ns (Levels of Logic = 6)
+  Clock Path Skew:      0.079ns (1.213 - 1.134)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 0.000ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.072ns
+
+  Clock Uncertainty:          0.072ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.125ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3 to Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X49Y98.DQ        Tcko                  0.341   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+                                                         Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly_3
+    SLICE_X54Y106.A1       net (fanout=11)       0.921   Inst_DataFlow_Display/Inst_VGA/h_cntr_reg_dly<3>
+    SLICE_X54Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/N6
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o1_SW0
+    SLICE_X55Y106.A3       net (fanout=1)        0.345   Inst_DataFlow_Display/Inst_VGA/N6
+    SLICE_X55Y106.A        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o1
+    SLICE_X55Y106.B5       net (fanout=10)       0.194   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_54_o
+    SLICE_X55Y106.B        Tilo                  0.097   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+                                                         Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o11
+    SLICE_X67Y44.D3        net (fanout=2)        2.514   Inst_DataFlow_Display/Inst_VGA/GND_6_o_h_cntr_reg_dly[11]_LessThan_32_o
+    SLICE_X67Y44.D         Tilo                  0.097   LED_2_OBUF
+                                                         Inst_DataFlow_Display/Inst_VGA/rd_en_fifo_proc1
+    SLICE_X67Y32.B5        net (fanout=2)        0.603   Inst_DataFlow_Display/rd_en_fifo_proc
+    SLICE_X67Y32.BMUX      Tilo                  0.255   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<2>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en1
+    SLICE_X73Y20.D5        net (fanout=6)        0.842   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en
+    SLICE_X73Y20.D         Tilo                  0.097   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/D<5>
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/Mmux_ENOUT<1>11
+    RAMB36_X2Y4.ENBWRENL   net (fanout=2)        0.364   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/enb_array<1>
+    RAMB36_X2Y4.CLKBWRCLKL Trcck_WREN            0.348   Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+                                                         Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram
+    ---------------------------------------------------  ---------------------------
+    Total                                        7.212ns (1.429ns logic, 5.783ns route)
+                                                         (19.8% logic, 80.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_Inst_DataFlow_Display_Inst_VGA_Inst_PxlClkGen_clkout0 = PERIOD TIMEGRP
+        "Inst_DataFlow_Display_Inst_VGA_Inst_PxlClkGen_clkout0" TS_sys_clk_pin
+        * 1.08 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81 (RAMB36_X1Y30.ADDRARDADDRU14), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.016ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_14 (FF)
+  Destination:          Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.405ns (Levels of Logic = 0)
+  Clock Path Skew:      0.389ns (0.900 - 0.511)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_14 to Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X60Y148.CQ            Tcko                  0.164   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr<15>
+                                                              Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_14
+    RAMB36_X1Y30.ADDRARDADDRU14 net (fanout=82)       0.424   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr<14>
+    RAMB36_X1Y30.CLKARDCLKU     Trckc_ADDRA (-Th)     0.183   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+                                                              Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.405ns (-0.019ns logic, 0.424ns route)
+                                                              (-4.7% logic, 104.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81 (RAMB36_X1Y30.ADDRARDADDRL14), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.017ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_14 (FF)
+  Destination:          Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.406ns (Levels of Logic = 0)
+  Clock Path Skew:      0.389ns (0.900 - 0.511)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_14 to Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X60Y148.CQ            Tcko                  0.164   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr<15>
+                                                              Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_14
+    RAMB36_X1Y30.ADDRARDADDRL14 net (fanout=82)       0.425   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr<14>
+    RAMB36_X1Y30.CLKARDCLKL     Trckc_ADDRA (-Th)     0.183   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+                                                              Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.406ns (-0.019ns logic, 0.425ns route)
+                                                              (-4.7% logic, 104.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81 (RAMB36_X1Y30.ADDRARDADDRU4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.020ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_4 (FF)
+  Destination:          Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.410ns (Levels of Logic = 0)
+  Clock Path Skew:      0.390ns (0.900 - 0.510)
+  Source Clock:         Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Destination Clock:    Inst_DataFlow_Display/pxl_clk_O rising at 9.259ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_4 to Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X60Y146.AQ           Tcko                  0.164   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr<7>
+                                                             Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr_4
+    RAMB36_X1Y30.ADDRARDADDRU4 net (fanout=82)       0.429   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/addressCtr<4>
+    RAMB36_X1Y30.CLKARDCLKU    Trckc_ADDRA (-Th)     0.183   Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+                                                             Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary81
+    -------------------------------------------------------  ---------------------------
+    Total                                            0.410ns (-0.019ns logic, 0.429ns route)
+                                                             (-4.6% logic, 104.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_Inst_DataFlow_Display_Inst_VGA_Inst_PxlClkGen_clkout0 = PERIOD TIMEGRP
+        "Inst_DataFlow_Display_Inst_VGA_Inst_PxlClkGen_clkout0" TS_sys_clk_pin
+        * 1.08 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.118ns (period - min period limit)
+  Period: 9.259ns
+  Min period limit: 2.141ns (467.071MHz) (Trper_CLKA)
+  Physical resource: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary1/CLKARDCLKL
+  Logical resource: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary1/CLKARDCLKL
+  Location pin: RAMB36_X1Y37.CLKARDCLKL
+  Clock network: Inst_DataFlow_Display/pxl_clk_O
+--------------------------------------------------------------------------------
+Slack: 7.118ns (period - min period limit)
+  Period: 9.259ns
+  Min period limit: 2.141ns (467.071MHz) (Trper_CLK_WF_NC(FMAX_CAS_WF_NC))
+  Physical resource: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary1/CLKARDCLKU
+  Logical resource: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary1/CLKARDCLKU
+  Location pin: RAMB36_X1Y37.CLKARDCLKU
+  Clock network: Inst_DataFlow_Display/pxl_clk_O
+--------------------------------------------------------------------------------
+Slack: 7.118ns (period - min period limit)
+  Period: 9.259ns
+  Min period limit: 2.141ns (467.071MHz) (Trper_CLKA)
+  Physical resource: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary2/CLKARDCLKL
+  Logical resource: Inst_DataFlow_Display/Inst_VGA/Inst_BackgroundVGA/Mram_BackgroundImageBinary2/CLKARDCLKL
+  Location pin: RAMB36_X2Y36.CLKARDCLKL
+  Clock network: Inst_DataFlow_Display/pxl_clk_O
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|     35.067ns|    101.591ns|           31|          130|         5123|        21084|
+| TS_Inst_DataFlow_Display_Inst_|      9.259ns|     94.066ns|          N/A|          130|            0|        21084|            0|
+| VGA_Inst_PxlClkGen_clkout0    |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
 
 
 Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock clk_i
-------------+------------+------------+------------+------------+-------------------------------+--------+
-            |Max Setup to|  Process   |Max Hold to |  Process   |                               | Clock  |
-Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)              | Phase  |
-------------+------------+------------+------------+------------+-------------------------------+--------+
-ISEcho      |   -0.081(R)|      FAST  |    1.879(R)|      SLOW  |clk_int_BUFG                   |   0.000|
-rst_i       |    3.757(R)|      SLOW  |    1.206(R)|      SLOW  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-            |    4.520(R)|      SLOW  |    2.221(R)|      SLOW  |clk_int_BUFG                   |   0.000|
-------------+------------+------------+------------+------------+-------------------------------+--------+
-
-Clock clk_i to Pad
---------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
-              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                               | Clock  |
-Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)              | Phase  |
---------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
-LED<0>        |         8.855(R)|      SLOW  |         3.862(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-LED<2>        |         9.203(R)|      SLOW  |         4.012(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-LED<4>        |         8.136(R)|      SLOW  |         3.491(R)|      FAST  |clk_int_BUFG                   |   0.000|
-LED<5>        |         8.135(R)|      SLOW  |         3.486(R)|      FAST  |clk_int_BUFG                   |   0.000|
-vga_blue_o<0> |         9.133(R)|      SLOW  |         3.994(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_blue_o<1> |         8.886(R)|      SLOW  |         3.873(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_blue_o<2> |         8.627(R)|      SLOW  |         3.702(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_blue_o<3> |         9.035(R)|      SLOW  |         3.962(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_green_o<0>|         8.934(R)|      SLOW  |         3.912(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_green_o<1>|         8.960(R)|      SLOW  |         3.890(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_green_o<2>|         8.887(R)|      SLOW  |         3.905(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_green_o<3>|         8.638(R)|      SLOW  |         3.723(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_hs_o      |         7.822(R)|      SLOW  |         3.289(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_red_o<0>  |         8.779(R)|      SLOW  |         3.789(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_red_o<1>  |         8.970(R)|      SLOW  |         3.915(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_red_o<2>  |         8.911(R)|      SLOW  |         3.881(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_red_o<3>  |         9.276(R)|      SLOW  |         4.099(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
-vga_vs_o      |         8.318(R)|      SLOW  |         3.559(R)|      FAST  |Inst_DataFlow_Display/pxl_clk_O|   0.000|
---------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
-
 Clock to Setup on destination clock clk_i
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_i          |    7.221|         |         |         |
+clk_i          |    8.987|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-rst_i          |LED<3>         |    4.875|
----------------+---------------+---------+
+
+Timing summary:
+---------------
+
+Timing errors: 161  Score: 259942  (Setup/Max: 259942, Hold: 0)
+
+Constraints cover 26207 paths, 0 nets, and 6755 connections
+
+Design statistics:
+   Minimum period:  94.066ns{1}   (Maximum frequency:  10.631MHz)
 
 
-Analysis completed Thu Nov 24 17:07:52 2016 
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Nov 29 16:56:35 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 692 MB
+Peak Memory Usage: 694 MB
 
 
 

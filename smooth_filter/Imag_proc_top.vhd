@@ -98,7 +98,9 @@ COMPONENT lowpass_filter
     Port ( D_i : in  STD_LOGIC_VECTOR (7 downto 0);
            Q_i : out  STD_LOGIC_VECTOR (7 downto 0);
 			  R_i : IN  std_logic;
-			  CLK_i : IN  std_logic
+			  CLK_i : IN  std_logic;
+			  start_process : IN std_logic;
+			  result_available : OUT std_logic
 			  );
 END COMPONENT;
 
@@ -184,13 +186,15 @@ smooth: lowpass_filter
 	  D_i => data_lena_orig,
 	  Q_i => data_lena_smooth,
 	  R_i => rst_i,
-	  CLK_i => clk_int
+	  CLK_i => clk_int,
+	  start_process => ena,
+	  result_available => wr_en_fifo_proc
 	);
 
 connection : process (clk_int, rst_i)
 begin
  if (rst_i = '1') then STATEG <= S1; addra <= (others => '0'); 
- ena <= '0';LED(4) <= '0';LED(5) <= '0';wr_en_fifo_orig <= '0';wr_en_fifo_proc <= '0';
+ ena <= '0';LED(4) <= '0';LED(5) <= '0';wr_en_fifo_orig <= '0'; -- wr_en_fifo_proc <= '0';
  data_fifo_orig_ready <= '0'; data_fifo_proc_ready <= '0';
 								
  elsif (clk_int'event and clk_int = '1') then
@@ -205,10 +209,10 @@ begin
 		when S2 => 
 			data_fifo_orig_ready <= '0'; data_fifo_proc_ready <= '0';
 			if addra = "11111111111111" then addra <= (others => '0');ena <= '0'; STATEG <= S3;LED(4) <= '0';
-			else addra <= addra + '1'; ena <= '1'; STATEG <= S2; wr_en_fifo_orig <= '1';wr_en_fifo_proc <= '1';LED(4) <= '1';
+			else addra <= addra + '1'; ena <= '1'; STATEG <= S2; wr_en_fifo_orig <= '1'; LED(4) <= '1'; --wr_en_fifo_proc <= '1';
 			end if;
 		when S3 => 
-			wr_en_fifo_orig <= '0'; wr_en_fifo_proc <= '0';
+			wr_en_fifo_orig <= '0'; ena <= '0'; -- wr_en_fifo_proc <= '0'; 
 			data_fifo_orig_ready <= '1'; data_fifo_proc_ready <= '1';
 			LED(5) <= '1';
 			--STATEG <= S3;

@@ -161,7 +161,8 @@ filter : lowpass_processing PORT MAP (CLK => CLK_i, d_ff_1 => input_1, d_ff_2 =>
 													Q => output);
 
 -- set prog_full_thresh and map the prog_full to the read enable of the fifo													
-prog_full_thresh_fifo <= "1111011";
+prog_full_thresh_fifo <= "1111011"; 
+-- 128(num of pxls on the row) - 3(num of pxls taken on the row) - 2(time of response) = 123
 rd_en_1 <= prog_full_1;
 rd_en_2 <= prog_full_2;
 

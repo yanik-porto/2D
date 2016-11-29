@@ -8,7 +8,16 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_tb.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/d_ff.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/fifo.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_filter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_processing.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
