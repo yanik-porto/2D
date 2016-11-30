@@ -39,7 +39,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000303000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002370000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000130000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>d_ff.vhd</CurrentItem>
    </ItemView>
@@ -70,7 +70,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000184000000010000000100000000000000000000000064ffffffff000000810000000000000001000001840000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000200000000010000000100000000000000000000000064ffffffff000000810000000000000001000002000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
@@ -82,6 +82,10 @@
          <ClosedNode>/lowpass_filter - lowpass_filter_arch C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|smoot_filter_tb|lowpass_filter.vhd/fifo_1 - fifo - fifo_a</ClosedNode>
          <ClosedNode>/lowpass_filter - lowpass_filter_arch C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|smoot_filter_tb|lowpass_filter.vhd/fifo_2 - fifo - fifo_a</ClosedNode>
          <ClosedNode>/lowpass_filter - lowpass_filter_arch C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|smoot_filter_tb|lowpass_filter.vhd/filter - lowpass_processing - lowpass_processing_arch</ClosedNode>
+         <ClosedNode>/lowpass_tb - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smoot_filter_tb|lowpass_tb.vhd/lp_filter - lowpass_filter - lowpass_filter_arch/fifo_1 - fifo - fifo_a</ClosedNode>
+         <ClosedNode>/lowpass_tb - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smoot_filter_tb|lowpass_tb.vhd/lp_filter - lowpass_filter - lowpass_filter_arch/fifo_2 - fifo - fifo_a</ClosedNode>
+         <ClosedNode>/lowpass_tb - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smoot_filter_tb|lowpass_tb.vhd/lp_filter - lowpass_filter - lowpass_filter_arch/filter - lowpass_processing - lowpass_processing_arch</ClosedNode>
+         <ClosedNode>/lowpass_tb - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smoot_filter_tb|lowpass_tb.vhd/uut - lowpass_filter - lowpass_filter_arch</ClosedNode>
          <ClosedNode>/lowpass_tb - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|smoot_filter_tb|lowpass_tb.vhd/uut - lowpass_filter - lowpass_filter_arch</ClosedNode>
          <ClosedNode>/tb_2 - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|smoot_filter_tb|tb_2.vhd/uut - lowpass_filter - lowpass_filter_arch/fifo_1 - fifo - fifo_a</ClosedNode>
          <ClosedNode>/tb_2 - behavior C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|smoot_filter_tb|tb_2.vhd/uut - lowpass_filter - lowpass_filter_arch/fifo_2 - fifo - fifo_a</ClosedNode>
@@ -103,13 +107,13 @@
          <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000204000000010000000100000000000000000000000064ffffffff000000810000000000000001000002040000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000200000000010000000100000000000000000000000064ffffffff000000810000000000000001000002000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -120,7 +124,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000195000000010000000100000000000000000000000064ffffffff000000810000000000000001000001950000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000200000000010000000100000000000000000000000064ffffffff000000810000000000000001000002000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>

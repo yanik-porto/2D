@@ -71,15 +71,6 @@ signal adder_6 : signed (15 downto 0);
 signal adder_7 : signed (15 downto 0);
 signal adder_8 : signed (15 downto 0);
 
---signal adder_1 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_2 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_3 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_4 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_5 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_6 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_7 : STD_LOGIC_VECTOR (12 downto 0);
---signal adder_8 : STD_LOGIC_VECTOR (12 downto 0);
-
 -- Pixels value
 signal pxl_1 : signed (12 downto 0);
 signal pxl_2 : signed (12 downto 0);
@@ -91,24 +82,24 @@ signal pxl_7 : signed (12 downto 0);
 signal pxl_8 : signed (12 downto 0);
 signal pxl_9 : signed (12 downto 0);
 
---signal pxl_1 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_2 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_3 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_4 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_5 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_6 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_7 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_8 : STD_LOGIC_VECTOR (12 downto 0);
---signal pxl_9 : STD_LOGIC_VECTOR (12 downto 0);
-
 -- pxl 9 stored after each flip flop 
 signal pxl_9_temp1 : STD_LOGIC_VECTOR (12 downto 0);
 signal pxl_9_temp2 : STD_LOGIC_VECTOR (12 downto 0);
 signal pxl_9_temp3 : STD_LOGIC_VECTOR (12 downto 0);
 
-signal toto : STD_LOGIC_VECTOR (12 downto 0);
+-- apply a mask on the pixels in order to apply any kind of filter
+signal mask1 : signed (3 downto 0) := x"1";
+signal mask2 : signed (3 downto 0) := x"1";
+signal mask3 : signed (3 downto 0) := x"1";
+signal mask4 : signed (3 downto 0) := x"1";
+signal mask5 : signed (3 downto 0) := x"0";
+signal mask6 : signed (3 downto 0) := x"1";
+signal mask7 : signed (3 downto 0) := x"1";
+signal mask8 : signed (3 downto 0) := x"1";
+signal mask9 : signed (3 downto 0) := x"1";
 
-signal bit_extend : signed (3 downto 0) := x"1";
+-- conversion of the 9th pixel for propagation
+signal toto : STD_LOGIC_VECTOR (12 downto 0);
 
 begin
 
@@ -116,7 +107,6 @@ toto <= conv_std_logic_vector(pxl_9, pxl_9'length);
 -- map 9th pixel to first ff and pass it to the other ones
 --port map( plug the input ofyour component to an alrady existing signal)
 d_ff_temp1 : d_ff generic map (13) PORT MAP (R => '0', D => toto, Q => pxl_9_temp1, CLK => CLK, E => '1');
---d_ff_temp1 : d_ff generic map (13) PORT MAP (R => '0', D => pxl_9, Q => pxl_9_temp1, CLK => CLK, E => '1');
 d_ff_temp2 : d_ff generic map (13) PORT MAP (R => '0', D => pxl_9_temp1, Q => pxl_9_temp2, CLK => CLK, E => '1');
 d_ff_temp3 : d_ff generic map (13) PORT MAP (R => '0', D => pxl_9_temp2, Q => pxl_9_temp3, CLK => CLK, E => '1');
 
@@ -126,25 +116,16 @@ begin
 
 	if(CLK'event and CLK = '1') then
 
-		pxl_1 <= signed('0' & d_ff_1) * bit_extend;
-		pxl_2 <= signed('0' & d_ff_2) * bit_extend;
-		pxl_3 <= signed('0' & d_ff_3) * bit_extend;
-		pxl_4 <= signed('0' & d_ff_4) * bit_extend;
-		pxl_5 <= signed('0' & d_ff_5) * bit_extend;
-		pxl_6 <= signed('0' & d_ff_6) * bit_extend;
-		pxl_7 <= signed('0' & d_ff_7) * bit_extend;
-		pxl_8 <= signed('0' & d_ff_8) * bit_extend;
-		pxl_9 <= signed('0' & d_ff_9) * bit_extend;
+		pxl_1 <= signed('0' & d_ff_1) * mask1;
+		pxl_2 <= signed('0' & d_ff_2) * mask2;
+		pxl_3 <= signed('0' & d_ff_3) * mask3;
+		pxl_4 <= signed('0' & d_ff_4) * mask4;
+		pxl_5 <= signed('0' & d_ff_5) * mask5;
+		pxl_6 <= signed('0' & d_ff_6) * mask6;
+		pxl_7 <= signed('0' & d_ff_7) * mask7;
+		pxl_8 <= signed('0' & d_ff_8) * mask8;
+		pxl_9 <= signed('0' & d_ff_9) * mask9;
 
---		pxl_1 <= signed("000" & d_ff_1);
---		pxl_2 <= signed("000" & d_ff_2);
---		pxl_3 <= signed("000" & d_ff_3);
---		pxl_4 <= signed("000" & d_ff_4);
---		pxl_5 <= signed("000" & d_ff_5);
---		pxl_6 <= signed("000" & d_ff_6);
---		pxl_7 <= signed("000" & d_ff_7);
---		pxl_8 <= signed("000" & d_ff_8);
---		pxl_9 <= signed("000" & d_ff_9);
 			
 		-- First layer of adders
 		adder_1 <= ((15 downto 13 => pxl_1(12)) & pxl_1) + ((15 downto 13 => pxl_2(12)) & pxl_2);

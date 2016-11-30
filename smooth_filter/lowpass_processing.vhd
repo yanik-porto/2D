@@ -79,7 +79,15 @@ signal pxl_7 : signed (12 downto 0);
 signal pxl_8 : signed (12 downto 0);
 signal pxl_9 : signed (12 downto 0);
 
-signal mask : signed (3 downto 0) := x"1";
+signal mask1 : signed (3 downto 0) := x"1";
+signal mask2 : signed (3 downto 0) := x"1";
+signal mask3 : signed (3 downto 0) := x"1";
+signal mask4 : signed (3 downto 0) := x"1";
+signal mask5 : signed (3 downto 0) := x"0";
+signal mask6 : signed (3 downto 0) := x"1";
+signal mask7 : signed (3 downto 0) := x"1";
+signal mask8 : signed (3 downto 0) := x"1";
+signal mask9 : signed (3 downto 0) := x"1";
 
 -- pxl 9 stored after each flip flop 
 signal pxl_9_temp1 : STD_LOGIC_VECTOR (12 downto 0);
@@ -103,15 +111,15 @@ begin
 
 	if(CLK'event and CLK = '1') then
 
-		pxl_1 <= signed('0' & d_ff_1) * mask;
-		pxl_2 <= signed('0' & d_ff_2) * mask;
-		pxl_3 <= signed('0' & d_ff_3) * mask;
-		pxl_4 <= signed('0' & d_ff_4) * mask;
-		pxl_5 <= signed('0' & d_ff_5) * mask;
-		pxl_6 <= signed('0' & d_ff_6) * mask;
-		pxl_7 <= signed('0' & d_ff_7) * mask;
-		pxl_8 <= signed('0' & d_ff_8) * mask;
-		pxl_9 <= signed('0' & d_ff_9) * mask;
+		pxl_1 <= signed('0' & d_ff_1) * mask1;
+		pxl_2 <= signed('0' & d_ff_2) * mask2;
+		pxl_3 <= signed('0' & d_ff_3) * mask3;
+		pxl_4 <= signed('0' & d_ff_4) * mask4;
+		pxl_5 <= signed('0' & d_ff_5) * mask5;
+		pxl_6 <= signed('0' & d_ff_6) * mask6;
+		pxl_7 <= signed('0' & d_ff_7) * mask7;
+		pxl_8 <= signed('0' & d_ff_8) * mask8;
+		pxl_9 <= signed('0' & d_ff_9) * mask9;
 			
 		-- First layer of adders
 		adder_1 <= ((15 downto 13 => pxl_1(12)) & pxl_1) + ((15 downto 13 => pxl_2(12)) & pxl_2);

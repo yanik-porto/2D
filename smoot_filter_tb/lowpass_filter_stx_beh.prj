@@ -1,0 +1,4 @@
+vhdl isim_temp "d_ff.vhd"
+vhdl isim_temp "lowpass_processing.vhd"
+vhdl isim_temp "fifo.vhd"
+vhdl isim_temp "lowpass_filter.vhd"

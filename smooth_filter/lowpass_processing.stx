@@ -1,0 +1,60 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.75 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.82 secs
+ 
+--> Reading design: lowpass_processing.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\d_ff.vhd" into library work
+Parsing entity <d_ff>.
+Parsing architecture <d_ff_arch> of entity <d_ff>.
+Parsing VHDL file "C:\Users\yport\Documents\VIBOT\S3\UE3 - RTIC\RTIC - Dubois\2DRealTimeFiltering\smooth_filter\lowpass_processing.vhd" into library work
+Parsing entity <lowpass_processing>.
+Parsing architecture <lowpass_processing_arch> of entity <lowpass_processing>.
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.71 secs
+ 
+--> 
+
+Total memory usage is 292116 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

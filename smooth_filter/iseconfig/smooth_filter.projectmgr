@@ -9,17 +9,16 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/COMP2N8_TEST1 - arch_COMP2N8_TEST1 C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|Proj_4Stud|ex_tb|comp2n8_t1.vhd</ClosedNode>
          <ClosedNode>/COMP2N8_TEST2 - arch_COMP2N8_TEST2 C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|Proj_4Stud|ex_tb|comp2n8_t2.vhd</ClosedNode>
-         <ClosedNode>/Imag_Proc_top - Imag_Proc_top_arch C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smooth_filter|Imag_proc_top.vhd/Inst_DataFlow_Display - DataFlow_Display - DataFlow_Display_arch</ClosedNode>
-         <ClosedNode>/Imag_Proc_top - Imag_Proc_top_arch C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smooth_filter|Imag_proc_top.vhd/smooth - lowpass_filter - lowpass_filter_arch</ClosedNode>
+         <ClosedNode>/Imag_Proc_top - Imag_Proc_top_arch C:|Users|yport|Documents|VIBOT|S3|UE3 - RTIC|RTIC - Dubois|2DRealTimeFiltering|smooth_filter|Imag_proc_top.vhd/smooth - lowpass_filter - lowpass_filter_arch/filter - lowpass_processing - lowpass_processing_arch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>smooth - lowpass_filter - lowpass_filter_arch (C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/lowpass_filter.vhd)</SelectedItem>
+         <SelectedItem>filter - lowpass_processing - lowpass_processing_arch (C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/lowpass_processing.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000234000000020000000000000000000000000200000064ffffffff000000810000000300000002000002340000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>smooth - lowpass_filter - lowpass_filter_arch (C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/lowpass_filter.vhd)</CurrentItem>
+      <CurrentItem>filter - lowpass_processing - lowpass_processing_arch (C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smooth_filter/lowpass_processing.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -27,13 +26,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000010000000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -42,7 +41,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000303000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002370000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000130000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>d_ff.vhd</CurrentItem>
    </ItemView>
@@ -72,11 +71,11 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000154000000010000000100000000000000000000000064ffffffff000000810000000000000001000001540000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000200000000010000000100000000000000000000000064ffffffff000000810000000000000001000002000000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff000000000000000200000170000000d201000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
@@ -87,7 +86,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -96,13 +95,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000022e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000022e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000010000000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>

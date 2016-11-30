@@ -10,23 +10,28 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-at 0 ps, Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 0 ps, Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-at 5 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 5 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 5 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 5 ns(2), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 5 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 5 ns(2), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 15 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 15 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 25 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 25 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 35 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 35 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 45 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 45 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 55 ns(1), Instance /lowpass_tb/uut/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 at 55 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 # run all
-Stopped at time : 413150 ns : File "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_tb.vhd" Line 100
+Stopped at time : 793775 ns : File "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_tb.vhd" Line 66
+# restart
+# run all
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Finished circuit initialization process.
+at 5 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 5 ns(2), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 15 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 25 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 35 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 45 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 55 ns(1), Instance /lowpass_tb/lp_filter/filter/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+Stopped at time : 411870 ns : File "C:/Users/yport/Documents/VIBOT/S3/UE3 - RTIC/RTIC - Dubois/2DRealTimeFiltering/smoot_filter_tb/lowpass_tb.vhd" Line 64

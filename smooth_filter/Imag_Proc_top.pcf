@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 29 16:54:39 2016
+// Written by: Map P.20131013 on Wed Nov 30 14:02:10 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -322,40 +322,33 @@ TIMEGRP sys_clk_pin = BEL "LED_4" BEL "STATEG_FSM_FFd1" BEL "addra_0" BEL
         "smooth/input_7_2" BEL "smooth/input_7_1" BEL "smooth/input_7_0" BEL
         "smooth/input_6_7" BEL "smooth/input_6_6" BEL "smooth/input_6_5" BEL
         "smooth/input_6_4" BEL "smooth/input_6_3" BEL "smooth/input_6_2" BEL
-        "smooth/input_6_1" BEL "smooth/input_6_0" BEL "smooth/input_5_7" BEL
-        "smooth/input_5_6" BEL "smooth/input_5_5" BEL "smooth/input_5_4" BEL
-        "smooth/input_5_3" BEL "smooth/input_5_2" BEL "smooth/input_5_1" BEL
-        "smooth/input_5_0" BEL "smooth/input_4_7" BEL "smooth/input_4_6" BEL
-        "smooth/input_4_5" BEL "smooth/input_4_4" BEL "smooth/input_4_3" BEL
-        "smooth/input_4_2" BEL "smooth/input_4_1" BEL "smooth/input_4_0" BEL
-        "smooth/input_3_7" BEL "smooth/input_3_6" BEL "smooth/input_3_5" BEL
-        "smooth/input_3_4" BEL "smooth/input_3_3" BEL "smooth/input_3_2" BEL
-        "smooth/input_3_1" BEL "smooth/input_3_0" BEL "smooth/input_2_7" BEL
-        "smooth/input_2_6" BEL "smooth/input_2_5" BEL "smooth/input_2_4" BEL
-        "smooth/input_2_3" BEL "smooth/input_2_2" BEL "smooth/input_2_1" BEL
-        "smooth/input_2_0" BEL "smooth/input_1_7" BEL "smooth/input_1_6" BEL
-        "smooth/input_1_5" BEL "smooth/input_1_4" BEL "smooth/input_1_3" BEL
-        "smooth/input_1_2" BEL "smooth/input_1_1" BEL "smooth/input_1_0" BEL
-        "smooth/filter/adder_7_10" BEL "smooth/filter/adder_7_9" BEL
-        "smooth/filter/adder_7_8" BEL "smooth/filter/adder_7_7" BEL
-        "smooth/filter/adder_7_6" BEL "smooth/filter/adder_7_5" BEL
-        "smooth/filter/adder_7_4" BEL "smooth/filter/adder_7_3" BEL
-        "smooth/filter/adder_7_2" BEL "smooth/filter/adder_7_1" BEL
-        "smooth/filter/adder_7_0" BEL "smooth/filter/adder_5_9" BEL
-        "smooth/filter/adder_5_8" BEL "smooth/filter/adder_5_7" BEL
-        "smooth/filter/adder_5_6" BEL "smooth/filter/adder_5_5" BEL
-        "smooth/filter/adder_5_4" BEL "smooth/filter/adder_5_3" BEL
-        "smooth/filter/adder_5_2" BEL "smooth/filter/adder_5_1" BEL
-        "smooth/filter/adder_5_0" BEL "smooth/filter/adder_6_9" BEL
-        "smooth/filter/adder_6_8" BEL "smooth/filter/adder_6_7" BEL
-        "smooth/filter/adder_6_6" BEL "smooth/filter/adder_6_5" BEL
-        "smooth/filter/adder_6_4" BEL "smooth/filter/adder_6_3" BEL
-        "smooth/filter/adder_6_2" BEL "smooth/filter/adder_6_1" BEL
-        "smooth/filter/adder_6_0" BEL "smooth/filter/adder_4_8" BEL
-        "smooth/filter/adder_4_7" BEL "smooth/filter/adder_4_6" BEL
-        "smooth/filter/adder_4_5" BEL "smooth/filter/adder_4_4" BEL
-        "smooth/filter/adder_4_3" BEL "smooth/filter/adder_4_2" BEL
-        "smooth/filter/adder_4_1" BEL "smooth/filter/adder_4_0" BEL
+        "smooth/input_6_1" BEL "smooth/input_6_0" BEL "smooth/input_4_7" BEL
+        "smooth/input_4_6" BEL "smooth/input_4_5" BEL "smooth/input_4_4" BEL
+        "smooth/input_4_3" BEL "smooth/input_4_2" BEL "smooth/input_4_1" BEL
+        "smooth/input_4_0" BEL "smooth/input_3_7" BEL "smooth/input_3_6" BEL
+        "smooth/input_3_5" BEL "smooth/input_3_4" BEL "smooth/input_3_3" BEL
+        "smooth/input_3_2" BEL "smooth/input_3_1" BEL "smooth/input_3_0" BEL
+        "smooth/input_2_7" BEL "smooth/input_2_6" BEL "smooth/input_2_5" BEL
+        "smooth/input_2_4" BEL "smooth/input_2_3" BEL "smooth/input_2_2" BEL
+        "smooth/input_2_1" BEL "smooth/input_2_0" BEL "smooth/input_1_7" BEL
+        "smooth/input_1_6" BEL "smooth/input_1_5" BEL "smooth/input_1_4" BEL
+        "smooth/input_1_3" BEL "smooth/input_1_2" BEL "smooth/input_1_1" BEL
+        "smooth/input_1_0" BEL "smooth/filter/adder_7_10" BEL
+        "smooth/filter/adder_7_9" BEL "smooth/filter/adder_7_8" BEL
+        "smooth/filter/adder_7_7" BEL "smooth/filter/adder_7_6" BEL
+        "smooth/filter/adder_7_5" BEL "smooth/filter/adder_7_4" BEL
+        "smooth/filter/adder_7_3" BEL "smooth/filter/adder_7_2" BEL
+        "smooth/filter/adder_7_1" BEL "smooth/filter/adder_7_0" BEL
+        "smooth/filter/adder_6_9" BEL "smooth/filter/adder_6_8" BEL
+        "smooth/filter/adder_6_7" BEL "smooth/filter/adder_6_6" BEL
+        "smooth/filter/adder_6_5" BEL "smooth/filter/adder_6_4" BEL
+        "smooth/filter/adder_6_3" BEL "smooth/filter/adder_6_2" BEL
+        "smooth/filter/adder_6_1" BEL "smooth/filter/adder_6_0" BEL
+        "smooth/filter/adder_5_9" BEL "smooth/filter/adder_5_8" BEL
+        "smooth/filter/adder_5_7" BEL "smooth/filter/adder_5_6" BEL
+        "smooth/filter/adder_5_5" BEL "smooth/filter/adder_5_4" BEL
+        "smooth/filter/adder_5_3" BEL "smooth/filter/adder_5_2" BEL
+        "smooth/filter/adder_5_1" BEL "smooth/filter/adder_5_0" BEL
         "smooth/filter/adder_2_8" BEL "smooth/filter/adder_2_7" BEL
         "smooth/filter/adder_2_6" BEL "smooth/filter/adder_2_5" BEL
         "smooth/filter/adder_2_4" BEL "smooth/filter/adder_2_3" BEL
@@ -365,31 +358,23 @@ TIMEGRP sys_clk_pin = BEL "LED_4" BEL "STATEG_FSM_FFd1" BEL "addra_0" BEL
         "smooth/filter/adder_1_5" BEL "smooth/filter/adder_1_4" BEL
         "smooth/filter/adder_1_3" BEL "smooth/filter/adder_1_2" BEL
         "smooth/filter/adder_1_1" BEL "smooth/filter/adder_1_0" BEL
-        "smooth/filter/adder_3_8" BEL "smooth/filter/adder_3_7" BEL
-        "smooth/filter/adder_3_6" BEL "smooth/filter/adder_3_5" BEL
-        "smooth/filter/adder_3_4" BEL "smooth/filter/adder_3_3" BEL
-        "smooth/filter/adder_3_2" BEL "smooth/filter/adder_3_1" BEL
-        "smooth/filter/adder_3_0" BEL "smooth/filter/pxl_8_7" BEL
+        "smooth/filter/adder_4_8" BEL "smooth/filter/adder_4_7" BEL
+        "smooth/filter/adder_4_6" BEL "smooth/filter/adder_4_5" BEL
+        "smooth/filter/adder_4_4" BEL "smooth/filter/adder_4_3" BEL
+        "smooth/filter/adder_4_2" BEL "smooth/filter/adder_4_1" BEL
+        "smooth/filter/adder_4_0" BEL "smooth/filter/pxl_8_7" BEL
         "smooth/filter/pxl_8_6" BEL "smooth/filter/pxl_8_5" BEL
         "smooth/filter/pxl_8_4" BEL "smooth/filter/pxl_8_3" BEL
         "smooth/filter/pxl_8_2" BEL "smooth/filter/pxl_8_1" BEL
-        "smooth/filter/pxl_8_0" BEL "smooth/filter/pxl_7_7" BEL
-        "smooth/filter/pxl_7_6" BEL "smooth/filter/pxl_7_5" BEL
-        "smooth/filter/pxl_7_4" BEL "smooth/filter/pxl_7_3" BEL
-        "smooth/filter/pxl_7_2" BEL "smooth/filter/pxl_7_1" BEL
-        "smooth/filter/pxl_7_0" BEL "smooth/filter/pxl_5_7" BEL
-        "smooth/filter/pxl_5_6" BEL "smooth/filter/pxl_5_5" BEL
-        "smooth/filter/pxl_5_4" BEL "smooth/filter/pxl_5_3" BEL
-        "smooth/filter/pxl_5_2" BEL "smooth/filter/pxl_5_1" BEL
-        "smooth/filter/pxl_5_0" BEL "smooth/filter/pxl_4_7" BEL
+        "smooth/filter/pxl_8_0" BEL "smooth/filter/pxl_4_7" BEL
         "smooth/filter/pxl_4_6" BEL "smooth/filter/pxl_4_5" BEL
         "smooth/filter/pxl_4_4" BEL "smooth/filter/pxl_4_3" BEL
         "smooth/filter/pxl_4_2" BEL "smooth/filter/pxl_4_1" BEL
-        "smooth/filter/pxl_4_0" BEL "smooth/filter/pxl_6_7" BEL
-        "smooth/filter/pxl_6_6" BEL "smooth/filter/pxl_6_5" BEL
-        "smooth/filter/pxl_6_4" BEL "smooth/filter/pxl_6_3" BEL
-        "smooth/filter/pxl_6_2" BEL "smooth/filter/pxl_6_1" BEL
-        "smooth/filter/pxl_6_0" BEL "smooth/filter/pxl_2_7" BEL
+        "smooth/filter/pxl_4_0" BEL "smooth/filter/pxl_7_7" BEL
+        "smooth/filter/pxl_7_6" BEL "smooth/filter/pxl_7_5" BEL
+        "smooth/filter/pxl_7_4" BEL "smooth/filter/pxl_7_3" BEL
+        "smooth/filter/pxl_7_2" BEL "smooth/filter/pxl_7_1" BEL
+        "smooth/filter/pxl_7_0" BEL "smooth/filter/pxl_2_7" BEL
         "smooth/filter/pxl_2_6" BEL "smooth/filter/pxl_2_5" BEL
         "smooth/filter/pxl_2_4" BEL "smooth/filter/pxl_2_3" BEL
         "smooth/filter/pxl_2_2" BEL "smooth/filter/pxl_2_1" BEL
@@ -402,10 +387,6 @@ TIMEGRP sys_clk_pin = BEL "LED_4" BEL "STATEG_FSM_FFd1" BEL "addra_0" BEL
         "smooth/filter/pxl_3_4" BEL "smooth/filter/pxl_3_3" BEL
         "smooth/filter/pxl_3_2" BEL "smooth/filter/pxl_3_1" BEL
         "smooth/filter/pxl_3_0" BEL "LED_5" BEL "wr_en_fifo_orig" BEL
-        "smooth/d_ff_temp2_av/temp_0" BEL "smooth/d_ff_temp3_av/temp_0" BEL
-        "smooth/d_ff_temp4_av/temp_0" BEL "smooth/d_ff_temp5_av/temp_0" BEL
-        "smooth/d_ff_temp6_av/temp_0" BEL "smooth/d_ff_temp7_av/temp_0" BEL
-        "smooth/d_ff_temp8_av/temp_0" BEL "smooth/d_ff_temp9_av/temp_0" BEL
         "smooth/d_ff_9/temp_7" BEL "smooth/d_ff_9/temp_6" BEL
         "smooth/d_ff_9/temp_5" BEL "smooth/d_ff_9/temp_4" BEL
         "smooth/d_ff_9/temp_3" BEL "smooth/d_ff_9/temp_2" BEL
@@ -446,26 +427,40 @@ TIMEGRP sys_clk_pin = BEL "LED_4" BEL "STATEG_FSM_FFd1" BEL "addra_0" BEL
         "smooth/filter/Mshreg_Q_6" BEL "smooth/filter/Q_6" BEL
         "smooth/filter/Mshreg_Q_5" BEL "smooth/filter/Q_5" BEL
         "smooth/filter/Mshreg_Q_4" BEL "smooth/filter/Q_4" BEL
+        "smooth/filter/Mshreg_Q_1" BEL "smooth/filter/Q_1" BEL
         "smooth/filter/Mshreg_Q_3" BEL "smooth/filter/Q_3" BEL
         "smooth/filter/Mshreg_Q_2" BEL "smooth/filter/Q_2" BEL
-        "smooth/filter/Mshreg_Q_1" BEL "smooth/filter/Q_1" BEL
+        "smooth/filter/Mshreg_adder_3_6" BEL "smooth/filter/adder_3_6" BEL
         "smooth/filter/Mshreg_Q_0" BEL "smooth/filter/Q_0" BEL
-        "smooth/filter/d_ff_temp3/Mshreg_temp_7" BEL
-        "smooth/filter/d_ff_temp3/temp_7" BEL
+        "smooth/filter/Mshreg_adder_3_7" BEL "smooth/filter/adder_3_7" BEL
+        "smooth/filter/Mshreg_adder_3_3" BEL "smooth/filter/adder_3_3" BEL
+        "smooth/filter/Mshreg_adder_3_5" BEL "smooth/filter/adder_3_5" BEL
+        "smooth/filter/Mshreg_adder_3_4" BEL "smooth/filter/adder_3_4" BEL
+        "smooth/filter/Mshreg_adder_3_0" BEL "smooth/filter/adder_3_0" BEL
+        "smooth/filter/Mshreg_adder_3_2" BEL "smooth/filter/adder_3_2" BEL
+        "smooth/filter/Mshreg_adder_3_1" BEL "smooth/filter/adder_3_1" BEL
         "smooth/filter/d_ff_temp3/Mshreg_temp_6" BEL
         "smooth/filter/d_ff_temp3/temp_6" BEL
+        "smooth/d_ff_temp10_av/Mshreg_temp_0" BEL
+        "smooth/d_ff_temp10_av/temp_01" BEL
+        "smooth/filter/d_ff_temp3/Mshreg_temp_7" BEL
+        "smooth/filter/d_ff_temp3/temp_7" BEL
+        "smooth/filter/d_ff_temp3/Mshreg_temp_3" BEL
+        "smooth/filter/d_ff_temp3/temp_3" BEL
         "smooth/filter/d_ff_temp3/Mshreg_temp_5" BEL
         "smooth/filter/d_ff_temp3/temp_5" BEL
         "smooth/filter/d_ff_temp3/Mshreg_temp_4" BEL
         "smooth/filter/d_ff_temp3/temp_4" BEL
-        "smooth/filter/d_ff_temp3/Mshreg_temp_3" BEL
-        "smooth/filter/d_ff_temp3/temp_3" BEL
+        "smooth/filter/d_ff_temp3/Mshreg_temp_0" BEL
+        "smooth/filter/d_ff_temp3/temp_0" BEL
         "smooth/filter/d_ff_temp3/Mshreg_temp_2" BEL
         "smooth/filter/d_ff_temp3/temp_2" BEL
         "smooth/filter/d_ff_temp3/Mshreg_temp_1" BEL
-        "smooth/filter/d_ff_temp3/temp_1" BEL
-        "smooth/filter/d_ff_temp3/Mshreg_temp_0" BEL
-        "smooth/filter/d_ff_temp3/temp_0" BEL
+        "smooth/filter/d_ff_temp3/temp_1" BEL "LED_3_OBUF_shift1" BEL
+        "LED_3_OBUF_shift2" BEL "LED_3_OBUF_shift3" BEL "LED_3_OBUF_shift4"
+        BEL "LED_3_OBUF_shift5" BEL "LED_3_OBUF_shift6" BEL
+        "LED_3_OBUF_shift7" BEL "LED_3_OBUF_shift8" BEL
+        "smooth/d_ff_temp10_av/temp_0" BEL
         "Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i"
         BEL
         "Inst_DataFlow_Display/fifo_proc/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN"
